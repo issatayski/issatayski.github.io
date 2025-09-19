@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Резюме — Бейсенбаев Исатай</title>
+
+  <!-- Иконки и шрифт -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Панель действий (не печатается) -->
+  <div class="toolbar no-print">
+    <button id="savePdf" class="btn primary"><i class="fa fa-file-pdf-o"></i> Сохранить в PDF</button>
+    <button id="printPage" class="btn"><i class="fa fa-print"></i> Печать</button>
+  </div>
+
+  <main id="resume" class="container">
+    <!-- Левая колонка -->
+    <aside class="left_Side">
+      <div class="profileText">
+        <div class="imgBx"><img src="img.jpg" alt="Фото: Бейсенбаев Исатай"></div>
+        <h1 class="name">Бейсенбаев Исатай</h1>
+        <p class="role">CCO ТОО АЙС Prof</p>
+      </div>
+
+      <section class="contactInfo">
+        <h3 class="title">Контакты</h3>
+        <ul class="contacts">
+          <li><i class="fa fa-phone"></i><a href="tel:+77071751983">+7 707 175 1983</a></li>
+          <li><i class="fa fa-envelope-o"></i><a href="mailto:issatayski@gmail.com">issatayski@gmail.com</a></li>
+          <li><i class="fa fa-globe"></i><a href="https://ais-prof.kz">ais-prof.kz</a></li>
+          <li><i class="fa fa-instagram"></i><a href="https://instagram.com/issatayski">@issatayski</a></li>
+          <li><i class="fa fa-map-marker"></i><span>г. Шымкент, мкр. Казыгурт, ул. Жетікөл 23</span></li>
+        </ul>
+      </section>
+
+      <section class="contactInfo education">
+        <h3 class="title">Образование</h3>
+        <ul class="edu">
+          <li><h5>2000–2004</h5><h4>Информатик</h4><div>Академия Улагат</div></li>
+          <li><h5>2022</h5><h4>No Code School 2.0</h4><div>Astana Hub</div></li>
+          <li><h5>2023</h5><h4>Junior 2D/3D artist</h4><div>Astana Hub</div></li>
+        </ul>
+      </section>
+
+      <section class="contactInfo language">
+        <h3 class="title">Языки</h3>
+        <ul class="langs">
+          <li><span>Казахский</span><span class="percent"><i style="width:100%"></i></span></li>
+          <li><span>Русский</span><span class="percent"><i style="width:90%"></i></span></li>
+          <li><span>Английский</span><span class="percent"><i style="width:47%"></i></span></li>
+        </ul>
+      </section>
+    </aside>
+
+    <!-- Правая колонка -->
+    <section class="right_Side">
+      <section class="about">
+        <h2 class="title2">Профиль</h2>
+        <p>Мужчина, 41 год, родился 5 февраля 1983. Женат, 6 детей. Проживаю и работаю в городе Шымкент.</p>
+      </section>
+
+      <section class="about">
+        <h2 class="title2">Опыт работы</h2>
+
+        <div class="timeline">
+          <div class="item">
+            <div class="meta"><span class="period">2024 — по н.в.</span><span class="company">ТОО АЙС Prof</span></div>
+            <h4>Коммерческий директор</h4>
+            <p>Разработка и реализация маркетинговых и коммерческих стратегий для компании АЙС Prof. Управление продажами, продвижением бренда и партнёрствами.</p>
+          </div>
+
+          <div class="item">
+            <div class="meta"><span class="period">2022 — 2024</span><span class="company">ТОО SIFRO</span></div>
+            <h4>Методист-преподаватель</h4>
+            <p>Создание учебных планов и программ для компьютерных курсов, соответствующих требованиям образовательного учреждения.</p>
+          </div>
+
+          <div class="item">
+            <div class="meta"><span class="period">2019 — 2022</span><span class="company">ИП ICORP</span></div>
+            <h4>Технический директор</h4>
+            <p>Продукт-менеджмент, разработка ПО, прототипирование.</p>
+          </div>
+
+          <div class="item">
+            <div class="meta"><span class="period">2014 — 2019</span><span class="company">АО Нурбанк</span></div>
+            <h4>Заведующий сектором</h4>
+            <p>Администрирование банковского ПО и эквайринговых систем.</p>
+          </div>
+
+          <div class="item">
+            <div class="meta"><span class="period">2012 — 2014</span><span class="company">АО ГЦВП</span></div>
+            <h4>Главный инженер</h4>
+            <p>Администрирование информационных систем.</p>
+          </div>
+
+          <div class="item">
+            <div class="meta"><span class="period">2010 — 2012</span><span class="company">АО Алянс Банк</span></div>
+            <h4>Главный инженер</h4>
+            <p>Мониторинг эквайрингового оборудования.</p>
+          </div>
+
+          <div class="item">
+            <div class="meta"><span class="period">2007 — 2010</span><span class="company">АО Нурбанк</span></div>
+            <h4>Заведующий сектором</h4>
+            <p>Мониторинг и администрирование банковского оборудования и ПО.</p>
+          </div>
+
+          <div class="item">
+            <div class="meta"><span class="period">2005 — 2007</span><span class="company">АО НИТ</span></div>
+            <h4>Главный инженер</h4>
+            <p>Администрирование ПО, обслуживание оргтехники.</p>
+          </div>
+
+          <div class="item">
+            <div class="meta"><span class="period">2004 — 2005</span><span class="company">Колледж «Арыстанбаб»</span></div>
+            <h4>Преподаватель</h4>
+            <p>Преподаватель информатики.</p>
+          </div>
+
+          <div class="item">
+            <div class="meta"><span class="period">2003 — 2004</span><span class="company">ОШ им. И. Жансугирова</span></div>
+            <h4>Преподаватель</h4>
+            <p>Преподаватель информатики.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="about skills">
+        <h2 class="title2">Профессиональные навыки</h2>
+        <div class="skill"><span>Нейросети</span><div class="bar"><i style="width:98%"></i></div></div>
+        <div class="skill"><span>HTML</span><div class="bar"><i style="width:70%"></i></div></div>
+        <div class="skill"><span>CSS</span><div class="bar"><i style="width:75%"></i></div></div>
+        <div class="skill"><span>JavaScript</span><div class="bar"><i style="width:45%"></i></div></div>
+        <div class="skill"><span>CMS WordPress</span><div class="bar"><i style="width:90%"></i></div></div>
+        <div class="skill"><span>LMS Moodle</span><div class="bar"><i style="width:90%"></i></div></div>
+        <div class="skill"><span>Figma</span><div class="bar"><i style="width:85%"></i></div></div>
+        <div class="skill"><span>Illustrator</span><div class="bar"><i style="width:60%"></i></div></div>
+        <div class="skill"><span>Photoshop</span><div class="bar"><i style="width:80%"></i></div></div>
+        <div class="skill"><span>After Effects</span><div class="bar"><i style="width:60%"></i></div></div>
+      </section>
+
+      <section class="about interest">
+        <h2 class="title2">Интересы</h2>
+        <ul class="chips">
+          <li><i class="fa fa-book"></i> Образование</li>
+          <li><i class="fa fa-sign-language"></i> Плавание</li>
+          <li><i class="fa fa-video-camera"></i> Видеомонтаж</li>
+          <li><i class="fa fa-plane"></i> Путешествия</li>
+        </ul>
+      </section>
+    </section>
+  </main>
+
+  <!-- html2pdf для экспорта -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-YcsIP3q9m1c3r2yQK3x6qB1m9S8yX8zH9vKz2m9l7e9W0w8w9yCj1D1QyUQ3qU8n1CqCkX9m2Kf9C3U8c0x8xw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    // Сохранить как PDF
+    document.getElementById('savePdf').addEventListener('click', () => {
+      const el = document.getElementById('resume');
+      const opt = {
+        margin:       [10,10,10,10],
+        filename:     'Resume_Beisenbayev_Isatay.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2, useCORS: true },
+        jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' },
+        pagebreak:    { mode: ['avoid-all','css','legacy'] }
+      };
+      html2pdf().set(opt).from(el).save();
+    });
+    // Запасной вариант — окно печати
+    document.getElementById('printPage').addEventListener('click', () => window.print());
+  </script>
+</body>
+</html>
