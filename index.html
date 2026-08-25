@@ -71,6 +71,20 @@ svg{display:block}
 .btn--s:hover{border-color:var(--blue);color:var(--blue)}
 .hero__art{width:100%;height:auto;border-radius:var(--r);background:var(--white);box-shadow:var(--sh);border:1px solid var(--line)}
 
+/* ---- обо мне ---- */
+.about{display:grid;grid-template-columns:1fr;gap:clamp(16px,3vw,32px);align-items:center}
+.photo{position:relative;width:100%;max-width:280px;aspect-ratio:1/1;border-radius:24px;overflow:hidden;
+  background:linear-gradient(135deg,#2B7CF3,#7C5CFC);box-shadow:var(--sh2);display:grid;place-items:center}
+.photo img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.photo span{color:#fff;font-weight:800;font-size:3.4rem;letter-spacing:.02em}
+.about p{color:var(--muted);font-size:.95em}
+.about p b{color:var(--ink)}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px}
+.facts div{background:var(--white);border-radius:14px;padding:11px 14px;box-shadow:var(--sh);
+  display:grid;grid-template-columns:30px 1fr;gap:10px;align-items:center;font-size:.82rem;font-weight:600}
+.facts .ic{width:30px;height:30px;border-radius:10px;display:grid;place-items:center}
+.facts .ic svg{width:16px;height:16px;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
 /* ---- цифры ---- */
 .stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .stat{background:var(--white);border-radius:var(--r);padding:clamp(16px,3vw,26px);box-shadow:var(--sh)}
@@ -177,7 +191,9 @@ svg{display:block}
   .hub__c em{margin:0}
   .brs{grid-template-columns:repeat(4,1fr)}
   .steps{grid-template-columns:repeat(3,1fr);gap:12px}
-  .tiles{grid-template-columns:repeat(4,1fr);gap:12px}
+  .tiles{grid-template-columns:repeat(3,1fr);gap:12px}
+  .about{grid-template-columns:300px 1fr;gap:clamp(28px,5vw,56px)}
+  .facts{grid-template-columns:repeat(2,1fr)}
   .why{grid-template-columns:repeat(2,1fr);gap:12px}
   .works{grid-template-columns:repeat(4,1fr)}
   .tl{grid-template-columns:repeat(2,1fr);gap:10px}
@@ -199,8 +215,6 @@ svg{display:block}
 <symbol id="i-window" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 3v18M3 12h18"/></symbol>
 <symbol id="i-brick" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="5"/><rect x="2.5" y="14" width="19" height="5"/><path d="M9 5v5M15 14v5"/></symbol>
 <symbol id="i-shop" viewBox="0 0 24 24"><path d="M4 9h16v11H4z"/><path d="M3 5h18l-1 4H4z"/><path d="M10 20v-6h4v6"/></symbol>
-<symbol id="i-bus" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="12" rx="2"/><path d="M4 10h16M9 4v6"/><circle cx="8" cy="19" r="1.6"/><circle cx="16" cy="19" r="1.6"/></symbol>
-<symbol id="i-med" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="14" rx="3"/><path d="M12 10v6M9 13h6M9 6V4h6v2"/></symbol>
 <symbol id="i-tools" viewBox="0 0 24 24"><path d="M14.5 5.5a4 4 0 0 0 5 5L21 9v6a2 2 0 0 1-2 2h-6l1.5-1.5a4 4 0 0 0-5-5L3 18"/></symbol>
 <symbol id="i-plane" viewBox="0 0 24 24"><path d="M10.5 13.5L3 11l18-7-7 18-2.5-7.5z"/></symbol>
 <symbol id="i-code" viewBox="0 0 24 24"><path d="M8 6l-5 6 5 6M16 6l5 6-5 6M13.5 4l-3 16"/></symbol>
@@ -211,8 +225,6 @@ svg{display:block}
 <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 15v2"/></symbol>
 <symbol id="i-qr" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14h1M14 20h3M20 17v4"/></symbol>
 <symbol id="i-swap" viewBox="0 0 24 24"><path d="M4 8h13l-3-3M20 16H7l3 3"/></symbol>
-<symbol id="i-cloud" viewBox="0 0 24 24"><path d="M7 18a4 4 0 0 1 .6-8 5.5 5.5 0 0 1 10.5 1.6A3.6 3.6 0 0 1 17.5 18z"/></symbol>
-<symbol id="i-pen" viewBox="0 0 24 24"><path d="M4 20l4-1 11-11a2.1 2.1 0 0 0-3-3L5 16z"/><path d="M14.5 5.5l4 4"/></symbol>
 <symbol id="i-cam" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17 7h.01"/></symbol>
 <symbol id="i-ear" viewBox="0 0 24 24"><path d="M7 9a5 5 0 0 1 10 0c0 3-3 3.6-3 6a2.6 2.6 0 0 1-5 .3"/><path d="M10 9a2 2 0 0 1 4 0M9 21v-2"/></symbol>
 <symbol id="i-board" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M12 16v4M8 20h8M7 8h7M7 11h4"/></symbol>
@@ -221,16 +233,113 @@ svg{display:block}
 <symbol id="i-factory" viewBox="0 0 24 24"><path d="M3 21V10l6 4V10l6 4V6h6v15z"/><path d="M3 21h18M18 10h.01"/></symbol>
 <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h12v4"/><rect x="3" y="7" width="18" height="12" rx="3"/><path d="M16.5 13h.01"/></symbol>
 <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3.5 6.5L12 13l8.5-6.5"/></symbol>
-<symbol id="i-git" viewBox="0 0 24 24"><circle cx="7" cy="6" r="2.4"/><circle cx="7" cy="18" r="2.4"/><circle cx="17" cy="10" r="2.4"/><path d="M7 8.4v7.2M17 12.4c0 3-4 2.6-4 5.6"/></symbol>
+<symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M20.5 12a8.5 8.5 0 0 1-12.7 7.4L3.5 20.5l1.2-4.2A8.5 8.5 0 1 1 20.5 12z"/><path d="M9.2 8.6c.5 0 .7.3.9.7l.4 1c.1.3 0 .5-.2.7l-.4.4c.6 1.1 1.4 1.9 2.5 2.5l.4-.4c.2-.2.4-.3.7-.2l1 .4c.4.2.7.4.7.9 0 .9-.8 1.5-1.7 1.3-2.8-.5-4.8-2.5-5.3-5.3-.2-.9.3-1.7 1-2z"/></symbol>
+<symbol id="i-tiktok" viewBox="0 0 24 24"><path d="M15 3.5c.6 2.2 2.2 3.6 4.4 3.8v3.1c-1.7 0-3.2-.5-4.4-1.4v6a5.6 5.6 0 1 1-4.7-5.5v3.2a2.4 2.4 0 1 0 1.7 2.3V3.5z"/></symbol>
 <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></symbol>
 <symbol id="i-call" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a12 12 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></symbol>
+</svg>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<!-- ПРЕВЬЮ САЙТОВ -->
+<symbol id="p-orda" viewBox="0 0 400 230">
+  <rect width="400" height="230" fill="#fff"/>
+  <rect width="400" height="32" fill="#F2F6FC"/><path d="M0 32h400" stroke="#DFE7F3" stroke-width="1.5"/>
+  <circle cx="18" cy="16" r="4" fill="#FF5C8A"/><circle cx="32" cy="16" r="4" fill="#FFB020"/><circle cx="46" cy="16" r="4" fill="#22C08A"/>
+  <rect x="64" y="8" width="250" height="16" rx="8" fill="#fff" stroke="#DFE7F3"/>
+  <text x="74" y="20" font-family="Manrope,sans-serif" font-size="9" fill="#6B7C97">ordaprint.kz</text>
+  <rect x="14" y="42" width="46" height="10" rx="5" fill="#2B7CF3"/>
+  <g fill="#DFE7F3"><rect x="76" y="44" width="30" height="6" rx="3"/><rect x="114" y="44" width="30" height="6" rx="3"/><rect x="152" y="44" width="30" height="6" rx="3"/></g>
+  <circle cx="372" cy="47" r="11" fill="#FF7A45"/><path d="M368 44h8l-1 6h-6z" fill="#fff"/>
+  <rect x="14" y="62" width="372" height="52" rx="10" fill="#E7F0FE"/>
+  <rect x="28" y="76" width="150" height="10" rx="5" fill="#2B7CF3"/><rect x="28" y="92" width="100" height="7" rx="3.5" fill="#9FC5FA"/>
+  <rect x="300" y="80" width="70" height="20" rx="10" fill="#2B7CF3"/>
+  <g>
+    <rect x="14" y="126" width="86" height="90" rx="9" fill="#fff" stroke="#DFE7F3" stroke-width="1.5"/>
+    <rect x="24" y="136" width="66" height="40" rx="6" fill="#EEF3FA"/><rect x="24" y="184" width="50" height="7" rx="3.5" fill="#DFE7F3"/><rect x="24" y="197" width="34" height="9" rx="4.5" fill="#2B7CF3"/>
+    <rect x="110" y="126" width="86" height="90" rx="9" fill="#fff" stroke="#DFE7F3" stroke-width="1.5"/>
+    <rect x="120" y="136" width="66" height="40" rx="6" fill="#EEF3FA"/><rect x="120" y="184" width="56" height="7" rx="3.5" fill="#DFE7F3"/><rect x="120" y="197" width="34" height="9" rx="4.5" fill="#2B7CF3"/>
+    <rect x="206" y="126" width="86" height="90" rx="9" fill="#fff" stroke="#DFE7F3" stroke-width="1.5"/>
+    <rect x="216" y="136" width="66" height="40" rx="6" fill="#EEF3FA"/><rect x="216" y="184" width="44" height="7" rx="3.5" fill="#DFE7F3"/><rect x="216" y="197" width="34" height="9" rx="4.5" fill="#2B7CF3"/>
+    <rect x="302" y="126" width="84" height="90" rx="9" fill="#fff" stroke="#DFE7F3" stroke-width="1.5"/>
+    <rect x="312" y="136" width="64" height="40" rx="6" fill="#EEF3FA"/><rect x="312" y="184" width="52" height="7" rx="3.5" fill="#DFE7F3"/><rect x="312" y="197" width="34" height="9" rx="4.5" fill="#2B7CF3"/>
+  </g>
+</symbol>
+<symbol id="p-ais" viewBox="0 0 400 230">
+  <rect width="400" height="230" fill="#fff"/>
+  <rect width="400" height="32" fill="#F2F6FC"/><path d="M0 32h400" stroke="#DFE7F3" stroke-width="1.5"/>
+  <circle cx="18" cy="16" r="4" fill="#FF5C8A"/><circle cx="32" cy="16" r="4" fill="#FFB020"/><circle cx="46" cy="16" r="4" fill="#22C08A"/>
+  <rect x="64" y="8" width="250" height="16" rx="8" fill="#fff" stroke="#DFE7F3"/>
+  <text x="74" y="20" font-family="Manrope,sans-serif" font-size="9" fill="#6B7C97">ais-prof.kz</text>
+  <rect x="14" y="42" width="44" height="10" rx="5" fill="#22C08A"/>
+  <g fill="#DFE7F3"><rect x="74" y="44" width="28" height="6" rx="3"/><rect x="110" y="44" width="28" height="6" rx="3"/><rect x="146" y="44" width="28" height="6" rx="3"/></g>
+  <rect x="340" y="40" width="46" height="14" rx="7" fill="#E2F8F0"/>
+  <rect x="14" y="62" width="216" height="90" rx="10" fill="#E2F8F0"/>
+  <rect x="34" y="82" width="176" height="50" rx="4" fill="none" stroke="#22C08A" stroke-width="4"/>
+  <g fill="#22C08A"><circle cx="56" cy="82" r="2.6"/><circle cx="82" cy="82" r="2.6"/><circle cx="108" cy="82" r="2.6"/><circle cx="134" cy="82" r="2.6"/><circle cx="160" cy="82" r="2.6"/><circle cx="186" cy="82" r="2.6"/></g>
+  <rect x="240" y="62" width="146" height="42" rx="9" fill="#fff" stroke="#DFE7F3" stroke-width="1.5"/>
+  <rect x="252" y="74" width="40" height="12" rx="6" fill="#22C08A"/><rect x="252" y="91" width="80" height="6" rx="3" fill="#DFE7F3"/>
+  <rect x="240" y="110" width="146" height="42" rx="9" fill="#fff" stroke="#DFE7F3" stroke-width="1.5"/>
+  <rect x="252" y="122" width="30" height="12" rx="6" fill="#2B7CF3"/><rect x="252" y="139" width="70" height="6" rx="3" fill="#DFE7F3"/>
+  <rect x="14" y="164" width="372" height="52" rx="9" fill="#F7FAFF" stroke="#DFE7F3" stroke-width="1.5"/>
+  <g fill="#DFE7F3"><rect x="28" y="176" width="60" height="7" rx="3.5"/><rect x="110" y="176" width="90" height="7" rx="3.5"/><rect x="222" y="176" width="60" height="7" rx="3.5"/>
+    <rect x="28" y="196" width="60" height="7" rx="3.5"/><rect x="110" y="196" width="70" height="7" rx="3.5"/><rect x="222" y="196" width="46" height="7" rx="3.5"/></g>
+  <rect x="330" y="173" width="44" height="13" rx="6.5" fill="#E2F8F0"/><rect x="330" y="193" width="44" height="13" rx="6.5" fill="#FFF3DC"/>
+</symbol>
+<symbol id="p-badam" viewBox="0 0 400 230">
+  <rect width="400" height="230" fill="#fff"/>
+  <rect width="400" height="32" fill="#F2F6FC"/><path d="M0 32h400" stroke="#DFE7F3" stroke-width="1.5"/>
+  <circle cx="18" cy="16" r="4" fill="#FF5C8A"/><circle cx="32" cy="16" r="4" fill="#FFB020"/><circle cx="46" cy="16" r="4" fill="#22C08A"/>
+  <rect x="64" y="8" width="250" height="16" rx="8" fill="#fff" stroke="#DFE7F3"/>
+  <text x="74" y="20" font-family="Manrope,sans-serif" font-size="9" fill="#6B7C97">badamqysh.kz</text>
+  <rect x="14" y="42" width="56" height="10" rx="5" fill="#FF7A45"/>
+  <g fill="#DFE7F3"><rect x="86" y="44" width="26" height="6" rx="3"/><rect x="120" y="44" width="26" height="6" rx="3"/><rect x="154" y="44" width="26" height="6" rx="3"/></g>
+  <rect x="14" y="62" width="372" height="84" rx="10" fill="#FFEDE5"/>
+  <g fill="#fff" stroke="#FF7A45" stroke-width="2">
+    <rect x="214" y="112" width="52" height="18" rx="3"/><rect x="272" y="112" width="52" height="18" rx="3"/>
+    <rect x="243" y="90" width="52" height="18" rx="3"/><rect x="301" y="90" width="52" height="18" rx="3"/>
+    <rect x="272" y="68" width="52" height="18" rx="3"/>
+  </g>
+  <rect x="243" y="90" width="52" height="18" rx="3" fill="#FF7A45"/>
+  <rect x="28" y="80" width="140" height="11" rx="5.5" fill="#FF7A45"/><rect x="28" y="98" width="100" height="7" rx="3.5" fill="#FFC2A6"/>
+  <rect x="28" y="116" width="64" height="16" rx="8" fill="#FF7A45"/>
+  <g>
+    <rect x="14" y="158" width="118" height="58" rx="9" fill="#fff" stroke="#DFE7F3" stroke-width="1.5"/>
+    <circle cx="38" cy="180" r="10" fill="#FFEDE5"/><rect x="56" y="175" width="56" height="7" rx="3.5" fill="#DFE7F3"/><rect x="28" y="196" width="80" height="6" rx="3" fill="#EEF3FA"/>
+    <rect x="141" y="158" width="118" height="58" rx="9" fill="#fff" stroke="#DFE7F3" stroke-width="1.5"/>
+    <circle cx="165" cy="180" r="10" fill="#E7F0FE"/><rect x="183" y="175" width="56" height="7" rx="3.5" fill="#DFE7F3"/><rect x="155" y="196" width="80" height="6" rx="3" fill="#EEF3FA"/>
+    <rect x="268" y="158" width="118" height="58" rx="9" fill="#fff" stroke="#DFE7F3" stroke-width="1.5"/>
+    <circle cx="292" cy="180" r="10" fill="#E2F8F0"/><rect x="310" y="175" width="56" height="7" rx="3.5" fill="#DFE7F3"/><rect x="282" y="196" width="80" height="6" rx="3" fill="#EEF3FA"/>
+  </g>
+</symbol>
+<symbol id="p-shtory" viewBox="0 0 400 230">
+  <rect width="400" height="230" fill="#fff"/>
+  <rect width="400" height="32" fill="#F2F6FC"/><path d="M0 32h400" stroke="#DFE7F3" stroke-width="1.5"/>
+  <circle cx="18" cy="16" r="4" fill="#FF5C8A"/><circle cx="32" cy="16" r="4" fill="#FFB020"/><circle cx="46" cy="16" r="4" fill="#22C08A"/>
+  <rect x="64" y="8" width="250" height="16" rx="8" fill="#fff" stroke="#DFE7F3"/>
+  <text x="74" y="20" font-family="Manrope,sans-serif" font-size="9" fill="#6B7C97">issatayski.github.io/shtory</text>
+  <rect x="14" y="42" width="48" height="10" rx="5" fill="#12B5E5"/>
+  <g fill="#DFE7F3"><rect x="78" y="44" width="26" height="6" rx="3"/><rect x="112" y="44" width="26" height="6" rx="3"/></g>
+  <rect x="330" y="40" width="26" height="14" rx="7" fill="#E1F5FD"/><rect x="360" y="40" width="26" height="14" rx="7" fill="#EEF3FA"/>
+  <rect x="14" y="62" width="180" height="154" rx="10" fill="#E1F5FD"/>
+  <rect x="34" y="80" width="140" height="96" rx="4" fill="#fff" stroke="#12B5E5" stroke-width="2"/>
+  <g stroke="#B7E7F8" stroke-width="4"><path d="M40 92h128M40 104h128M40 116h128M40 128h128M40 140h128M40 152h128M40 164h128"/></g>
+  <rect x="34" y="188" width="90" height="16" rx="8" fill="#12B5E5"/>
+  <rect x="204" y="62" width="182" height="154" rx="10" fill="#fff" stroke="#DFE7F3" stroke-width="1.5"/>
+  <rect x="218" y="78" width="100" height="9" rx="4.5" fill="#152238"/>
+  <g>
+    <rect x="218" y="98" width="154" height="24" rx="12" fill="#E1F5FD"/><rect x="230" y="106" width="60" height="8" rx="4" fill="#12B5E5"/>
+    <rect x="218" y="128" width="154" height="24" rx="12" fill="#F2F6FC"/><rect x="230" y="136" width="72" height="8" rx="4" fill="#C3D0E4"/>
+    <rect x="218" y="158" width="154" height="24" rx="12" fill="#F2F6FC"/><rect x="230" y="166" width="50" height="8" rx="4" fill="#C3D0E4"/>
+  </g>
+  <rect x="218" y="190" width="86" height="18" rx="9" fill="#22C08A"/>
+</symbol>
 </svg>
 
 <header class="hdr">
   <div class="hdr__in">
     <a class="logo" href="#top"><i>ИБ</i>Исатай Бейсенбаев</a>
     <nav>
-      <a href="#what">Что делаю</a><a href="#how">Как работаю</a>
+      <a href="#about">Обо мне</a><a href="#what">Что делаю</a><a href="#how">Как работаю</a>
       <a href="#skills">Умения</a><a href="#works">Работы</a><a href="#contacts">Контакты</a>
     </nav>
     <a class="call" href="tel:+77071751983">Позвонить</a>
@@ -292,6 +401,25 @@ svg{display:block}
   </div>
 </section>
 
+<!-- ОБО МНЕ -->
+<section class="sec" id="about">
+  <div><span class="kicker">Обо мне</span><h2 class="h2" style="margin-top:12px">Исатай Бейсенбаев</h2></div>
+  <div class="about">
+    <!-- ФОТО: положите свой снимок рядом с index.html и назовите foto.jpg -->
+    <div class="photo"><span>ИБ</span><img src="foto.jpg" alt="Исатай Бейсенбаев" onerror="this.remove()"></div>
+    <div>
+      <p><b>Живу и работаю в Шымкенте.</b> Больше двадцати лет в компьютерных системах: начинал инженером и учителем информатики, затем банковские программы и терминалы оплаты, а последние годы делаю свои продукты.</p>
+      <p style="margin-top:10px">Сейчас делаю программы учёта и IT-решения для тех, кто работает руками: заводы, магазины, поставщики, мастерские. Каждый день сам работаю на производстве — поэтому понимаю, о чём говорит мастер в цеху, и не заставляю объяснять дважды.</p>
+      <div class="facts">
+        <div><span class="ic c-blue"><svg><use href="#i-pin"/></svg></span>Шымкент, работаю по всему Казахстану</div>
+        <div><span class="ic c-green"><svg><use href="#i-factory"/></svg></span>Каждый день на производстве</div>
+        <div><span class="ic c-violet"><svg><use href="#i-globe"/></svg></span>Қазақша, орысша, English</div>
+        <div><span class="ic c-orange"><svg><use href="#i-board"/></svg></span>Преподавал информатику</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ЦИФРЫ -->
 <section class="sec">
   <div><span class="kicker">Коротко обо мне</span><h2 class="h2" style="margin-top:12px">Немного цифр</h2></div>
@@ -322,14 +450,14 @@ svg{display:block}
 <section class="sec">
   <div><span class="kicker">Опыт по видам бизнеса</span><h2 class="h2" style="margin-top:12px">Для кого уже делал</h2></div>
   <div class="brs">
-    <div class="br"><span class="ic c-blue"><svg><use href="#i-window"/></svg></span>Стеклопакеты</div>
+    <div class="br"><span class="ic c-blue"><svg><use href="#i-window"/></svg></span>Окна и стеклопакеты</div>
     <div class="br"><span class="ic c-orange"><svg><use href="#i-brick"/></svg></span>Кирпичный завод</div>
     <div class="br"><span class="ic c-green"><svg><use href="#i-gear"/></svg></span>Металл и профиль</div>
-    <div class="br"><span class="ic c-violet"><svg><use href="#i-shop"/></svg></span>Магазин и кухня</div>
-    <div class="br"><span class="ic c-cyan"><svg><use href="#i-bus"/></svg></span>Автобусы</div>
-    <div class="br"><span class="ic c-pink"><svg><use href="#i-med"/></svg></span>Клиники</div>
-    <div class="br"><span class="ic c-yellow"><svg><use href="#i-tools"/></svg></span>Услуги и мастера</div>
-    <div class="br"><span class="ic c-blue"><svg><use href="#i-plane"/></svg></span>Туризм</div>
+    <div class="br"><span class="ic c-violet"><svg><use href="#i-shop"/></svg></span>Интернет-магазин</div>
+    <div class="br"><span class="ic c-cyan"><svg><use href="#i-truck"/></svg></span>Поставки и склад</div>
+    <div class="br"><span class="ic c-pink"><svg><use href="#i-shop"/></svg></span>Кафе и доставка еды</div>
+    <div class="br"><span class="ic c-yellow"><svg><use href="#i-tools"/></svg></span>Жалюзи и шторы</div>
+    <div class="br"><span class="ic c-green"><svg><use href="#i-plane"/></svg></span>Удобрения и агро</div>
   </div>
 </section>
 
@@ -359,11 +487,8 @@ svg{display:block}
     <div class="tile"><span class="ic c-cyan"><svg><use href="#i-bot"/></svg></span><b>Боты в Telegram</b><span>напоминают и отвечают</span></div>
     <div class="tile"><span class="ic c-pink"><svg><use href="#i-box"/></svg></span><b>Учёт склада</b><span>остатки сходятся</span></div>
     <div class="tile"><span class="ic c-yellow"><svg><use href="#i-lock"/></svg></span><b>Доступы</b><span>каждый видит своё</span></div>
-    <div class="tile"><span class="ic c-green"><svg><use href="#i-money"/></svg></span><b>Оплата Kaspi</b><span>QR и переводы</span></div>
     <div class="tile"><span class="ic c-blue"><svg><use href="#i-qr"/></svg></span><b>QR и штрихкоды</b><span>сканируй и работай</span></div>
     <div class="tile"><span class="ic c-violet"><svg><use href="#i-swap"/></svg></span><b>Перенос данных</b><span>из старых файлов</span></div>
-    <div class="tile"><span class="ic c-cyan"><svg><use href="#i-cloud"/></svg></span><b>Размещение</b><span>дешёвый хостинг</span></div>
-    <div class="tile"><span class="ic c-pink"><svg><use href="#i-pen"/></svg></span><b>Дизайн и видео</b><span>сайты, ролики, 360°</span></div>
   </div>
 </section>
 
@@ -373,7 +498,7 @@ svg{display:block}
   <div class="why">
     <div><span class="ic c-orange"><svg><use href="#i-factory"/></svg></span><div><b>Знаю производство изнутри</b><span>каждый день работаю на заводе, объяснять не надо</span></div></div>
     <div><span class="ic c-blue"><svg><use href="#i-flag"/></svg></span><div><b>Всё делаю сам</b><span>один человек отвечает за результат</span></div></div>
-    <div><span class="ic c-green"><svg><use href="#i-wallet"/></svg></span><div><b>Дёшево содержать</b><span>обычный хостинг за пару тысяч тенге в месяц</span></div></div>
+    <div><span class="ic c-green"><svg><use href="#i-wallet"/></svg></span><div><b>Без платы каждый месяц</b><span>программа ваша, а не в аренду</span></div></div>
     <div><span class="ic c-violet"><svg><use href="#i-ear"/></svg></span><div><b>Говорю просто</b><span>без непонятных слов, на языке вашего дела</span></div></div>
     <div><span class="ic c-cyan"><svg><use href="#i-board"/></svg></span><div><b>Учу ваших людей</b><span>раньше преподавал, объясню любому сотруднику</span></div></div>
     <div><span class="ic c-pink"><svg><use href="#i-globe"/></svg></span><div><b>Қазақша және орысша</b><span>программа на двух языках</span></div></div>
@@ -386,73 +511,35 @@ svg{display:block}
   <div class="works">
 
     <!-- РАБОТА 1 -->
-    <a class="work" href="https://issatayski.github.io/steklo" target="_blank" rel="noopener">
-      <svg class="work__art" viewBox="0 0 400 170" aria-hidden="true">
-        <rect width="400" height="170" fill="#E7F0FE"/>
-        <rect x="120" y="30" width="160" height="100" rx="8" fill="#fff" stroke="#2B7CF3" stroke-width="3"/>
-        <rect x="136" y="46" width="128" height="68" rx="4" fill="#DCEBFF"/>
-        <path d="M136 46h128M200 46v68" stroke="#fff" stroke-width="4"/>
-        <rect x="120" y="142" width="160" height="6" rx="3" fill="#2B7CF3" opacity=".3"/>
-        <circle cx="322" cy="52" r="20" fill="#FF7A45"/><path d="M316 52l5 5 9-10" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        <rect x="62" y="96" width="34" height="34" rx="10" fill="#22C08A"/><path d="M71 113l6 6 11-13" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      <div class="work__t"><span class="pill" style="background:var(--sky);color:var(--blue)">Стеклопакеты</span>
-        <h3>GlassERP</h3><p>Заказ, раскрой стекла, проверка качества, паспорт на каждое изделие.</p>
-        <span class="go">Открыть демо →</span></div>
+    <a class="work" href="https://ordaprint.kz/" target="_blank" rel="noopener">
+      <svg class="work__art" viewBox="0 0 400 230" aria-hidden="true"><use href="#p-orda"/></svg>
+      <div class="work__t"><span class="pill" style="background:var(--sky);color:var(--blue)">Интернет-магазин</span>
+        <h3>Orda Print</h3><p>Каталог товаров, карточки, корзина и оформление заказа.</p>
+        <span class="go">Открыть сайт →</span></div>
     </a>
 
     <!-- РАБОТА 2 -->
-    <a class="work" href="https://badamqysh.kz" target="_blank" rel="noopener">
-      <svg class="work__art" viewBox="0 0 400 170" aria-hidden="true">
-        <rect width="400" height="170" fill="#FFEDE5"/>
-        <g fill="#fff" stroke="#FF7A45" stroke-width="3">
-          <rect x="96" y="100" width="66" height="24" rx="5"/><rect x="168" y="100" width="66" height="24" rx="5"/><rect x="240" y="100" width="66" height="24" rx="5"/>
-          <rect x="132" y="70" width="66" height="24" rx="5"/><rect x="204" y="70" width="66" height="24" rx="5"/>
-          <rect x="168" y="40" width="66" height="24" rx="5"/>
-        </g>
-        <rect x="204" y="70" width="66" height="24" rx="5" fill="#FF7A45"/>
-        <rect x="96" y="136" width="210" height="6" rx="3" fill="#FF7A45" opacity=".3"/>
-        <circle cx="52" cy="60" r="22" fill="#FFB020"/><path d="M52 50v12l7 5" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
-      </svg>
-      <div class="work__t"><span class="pill" style="background:var(--orange-l);color:var(--orange)">Кирпичный завод</span>
-        <h3>Badam Qysh</h3><p>Заявки, партии, отгрузка с уведомлением в Telegram, табло в цеху.</p>
-        <span class="go">Смотреть →</span></div>
+    <a class="work" href="https://ais-prof.kz/" target="_blank" rel="noopener">
+      <svg class="work__art" viewBox="0 0 400 230" aria-hidden="true"><use href="#p-ais"/></svg>
+      <div class="work__t"><span class="pill" style="background:var(--green-l);color:var(--green)">Завод</span>
+        <h3>АЙС Prof</h3><p>Сайт завода рамок для окон и программа учёта заказов внутри.</p>
+        <span class="go">Открыть сайт →</span></div>
     </a>
 
     <!-- РАБОТА 3 -->
-    <a class="work" href="https://ais-prof.kz" target="_blank" rel="noopener">
-      <svg class="work__art" viewBox="0 0 400 170" aria-hidden="true">
-        <rect width="400" height="170" fill="#E2F8F0"/>
-        <rect x="100" y="36" width="200" height="98" rx="10" fill="#fff" stroke="#22C08A" stroke-width="3"/>
-        <rect x="116" y="52" width="168" height="16" rx="8" fill="#C6F0E1"/>
-        <rect x="116" y="78" width="80" height="10" rx="5" fill="#22C08A"/>
-        <rect x="116" y="96" width="120" height="10" rx="5" fill="#DFE7F3"/>
-        <rect x="116" y="114" width="60" height="10" rx="5" fill="#DFE7F3"/>
-        <circle cx="266" cy="106" r="22" fill="#22C08A"/><path d="M258 106l6 6 12-14" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        <circle cx="54" cy="60" r="18" fill="#2B7CF3"/><path d="M47 60h14M54 53v14" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
-      </svg>
-      <div class="work__t"><span class="pill" style="background:var(--green-l);color:var(--green)">Профиль для окон</span>
-        <h3>AisERP</h3><p>Работает на заводе каждый день: заказы, склад, отгрузки, долги.</p>
-        <span class="go">Сайт компании →</span></div>
+    <a class="work" href="https://badamqysh.kz" target="_blank" rel="noopener">
+      <svg class="work__art" viewBox="0 0 400 230" aria-hidden="true"><use href="#p-badam"/></svg>
+      <div class="work__t"><span class="pill" style="background:var(--orange-l);color:var(--orange)">Кирпичный завод</span>
+        <h3>Badam Qysh</h3><p>Сайт завода и учёт: заявки, партии, отгрузки, склад.</p>
+        <span class="go">Открыть сайт →</span></div>
     </a>
 
     <!-- РАБОТА 4 -->
-    <a class="work" href="https://issatayski.github.io/wayo/" target="_blank" rel="noopener">
-      <svg class="work__art" viewBox="0 0 400 170" aria-hidden="true">
-        <rect width="400" height="170" fill="#EEEAFF"/>
-        <path d="M40 128C96 128 100 52 180 52s84 76 180 76" stroke="#C9BEFF" stroke-width="4" stroke-dasharray="10 10" fill="none" stroke-linecap="round"/>
-        <circle cx="40" cy="128" r="10" fill="#7C5CFC"/>
-        <path d="M356 128v-14a12 12 0 1 0-24 0c0 9 12 20 12 20s12-11 12-20z" fill="#FF5C8A"/>
-        <g><rect x="136" y="60" width="104" height="46" rx="10" fill="#fff" stroke="#7C5CFC" stroke-width="3"/>
-          <rect x="148" y="70" width="36" height="24" rx="4" fill="#DCD5FF"/><rect x="192" y="70" width="36" height="24" rx="4" fill="#DCD5FF"/>
-          <circle cx="158" cy="112" r="8" fill="#7C5CFC"/><circle cx="220" cy="112" r="8" fill="#7C5CFC"/></g>
-        <rect x="272" y="34" width="82" height="46" rx="8" fill="#fff" stroke="#7C5CFC" stroke-width="3"/>
-        <path d="M300 34v46" stroke="#C9BEFF" stroke-width="3" stroke-dasharray="5 5"/>
-        <rect x="310" y="48" width="34" height="7" rx="3.5" fill="#7C5CFC"/><rect x="310" y="62" width="24" height="7" rx="3.5" fill="#DFE7F3"/>
-      </svg>
-      <div class="work__t"><span class="pill" style="background:var(--violet-l);color:var(--violet)">Автобусы</span>
-        <h3>Bilet all</h3><p>Продажа билетов на межгород: касса вокзала и покупка с телефона.</p>
-        <span class="go">Смотреть →</span></div>
+    <a class="work" href="https://issatayski.github.io/shtory/" target="_blank" rel="noopener">
+      <svg class="work__art" viewBox="0 0 400 230" aria-hidden="true"><use href="#p-shtory"/></svg>
+      <div class="work__t"><span class="pill" style="background:var(--cyan-l);color:var(--cyan)">Жалюзи и шторы</span>
+        <h3>Стиль в каждом окне</h3><p>Сайт на двух языках: подбор за минуту и заявка в WhatsApp.</p>
+        <span class="go">Открыть сайт →</span></div>
     </a>
 
   </div>
@@ -479,9 +566,9 @@ svg{display:block}
   <div class="cts">
     <a href="tel:+77071751983"><span class="ic c-blue"><svg><use href="#i-call"/></svg></span>+7 707 175 19 83</a>
     <a href="mailto:issatayski@gmail.com"><span class="ic c-green"><svg><use href="#i-mail"/></svg></span>issatayski@gmail.com</a>
-    <a href="https://github.com/issatayski" target="_blank" rel="noopener"><span class="ic c-violet"><svg><use href="#i-git"/></svg></span>github.com/issatayski</a>
+    <a href="https://wa.me/77754046186" target="_blank" rel="noopener"><span class="ic c-green"><svg><use href="#i-whatsapp"/></svg></span>WhatsApp +7 775 404 61 86</a>
     <a href="https://instagram.com/issatayski" target="_blank" rel="noopener"><span class="ic c-pink"><svg><use href="#i-cam"/></svg></span>@issatayski</a>
-    <a href="https://ais-prof.kz" target="_blank" rel="noopener"><span class="ic c-cyan"><svg><use href="#i-globe"/></svg></span>ais-prof.kz</a>
+    <a href="https://www.tiktok.com/@issatayski" target="_blank" rel="noopener"><span class="ic c-violet"><svg><use href="#i-tiktok"/></svg></span>TikTok @issatayski</a>
     <p><span class="ic c-yellow"><svg><use href="#i-pin"/></svg></span>Шымкент</p>
   </div>
   <p class="foot">Исатай Бейсенбаев · 2026</p>

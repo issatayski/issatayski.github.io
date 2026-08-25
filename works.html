@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Все работы — Исатай Бейсенбаев</title>
-<meta name="description" content="Программы, которые я сделал: для заводов, магазинов, клиник, перевозчиков.">
+<meta name="description" content="Сайты и программы учёта, которые я сделал: заводы, магазины, поставки, услуги.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -22,7 +22,7 @@
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f);
   font-size:clamp(16px,.9vw + 13px,18px);line-height:1.5;-webkit-font-smoothing:antialiased}
-a{color:inherit}h1,h2,h3{margin:0;font-weight:800;line-height:1.12;letter-spacing:-.02em}p{margin:0}svg{display:block}
+a{color:inherit}h1,h2{margin:0;font-weight:800;line-height:1.12;letter-spacing:-.02em}p{margin:0}svg{display:block}
 :focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:8px}
 
 .hdr{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
@@ -35,7 +35,7 @@ a{color:inherit}h1,h2,h3{margin:0;font-weight:800;line-height:1.12;letter-spacin
 .back{color:var(--blue);font-weight:700;text-decoration:none;font-size:.88rem}
 .head{margin:18px 0 22px}
 .head h1{font-size:clamp(1.8rem,6vw,3rem)}
-.head p{color:var(--muted);margin-top:10px;max-width:44ch;font-size:.94em}
+.head p{color:var(--muted);margin-top:10px;max-width:46ch;font-size:.94em}
 
 .filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
 .filters button{font-family:var(--f);font-weight:700;font-size:.84rem;background:var(--white);color:var(--muted);
@@ -47,11 +47,11 @@ a{color:inherit}h1,h2,h3{margin:0;font-weight:800;line-height:1.12;letter-spacin
 .item{background:var(--white);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);
   display:flex;flex-direction:column;text-decoration:none;transition:.18s}
 a.item:hover{box-shadow:var(--sh2);transform:translateY(-4px)}
-.art{width:100%;height:auto}
+.art{width:100%;height:auto;border-bottom:1px solid var(--line)}
 .txt{padding:16px 18px 18px;display:flex;flex-direction:column;gap:7px;flex:1}
 .top{display:flex;justify-content:space-between;gap:10px;align-items:center}
 .pill{font-size:.68rem;font-weight:700;padding:5px 10px;border-radius:99px}
-.state{font-size:.68rem;font-weight:700;color:var(--muted);white-space:nowrap}
+.state{font-size:.7rem;font-weight:700;color:var(--blue);white-space:nowrap}
 .item h2{font-size:1.08rem}
 .item p{color:var(--muted);font-size:.85em;flex:1}
 .item[hidden]{display:none}
@@ -70,137 +70,269 @@ a.item:hover{box-shadow:var(--sh2);transform:translateY(-4px)}
 <body>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-<symbol id="a-glass" viewBox="0 0 400 170">
-  <rect width="400" height="170" fill="#E7F0FE"/>
-  <rect x="120" y="30" width="160" height="100" rx="8" fill="#fff" stroke="#2B7CF3" stroke-width="3"/>
-  <rect x="136" y="46" width="128" height="68" rx="4" fill="#DCEBFF"/>
-  <path d="M136 46h128M200 46v68" stroke="#fff" stroke-width="4"/>
-  <circle cx="322" cy="52" r="20" fill="#FF7A45"/><path d="M316 52l5 5 9-10" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  <rect x="62" y="96" width="34" height="34" rx="10" fill="#22C08A"/><path d="M71 113l6 6 11-13" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<!-- ЕДИНЫЙ СТИЛЬ ПРЕВЬЮ: окно браузера 400x230, адресная строка, схема страницы -->
+
+<symbol id="p-orda" viewBox="0 0 400 230">
+  <rect width="400" height="230" fill="#fff"/>
+  <rect width="400" height="32" fill="#F2F6FC"/><path d="M0 32h400" stroke="#DFE7F3" stroke-width="1.5"/>
+  <circle cx="18" cy="16" r="4" fill="#FF5C8A"/><circle cx="32" cy="16" r="4" fill="#FFB020"/><circle cx="46" cy="16" r="4" fill="#22C08A"/>
+  <rect x="64" y="8" width="250" height="16" rx="8" fill="#fff" stroke="#DFE7F3"/>
+  <text x="74" y="20" font-family="Manrope,sans-serif" font-size="9" fill="#6B7C97">ordaprint.kz</text>
+  <rect x="14" y="42" width="46" height="10" rx="5" fill="#2B7CF3"/>
+  <g fill="#DFE7F3"><rect x="76" y="44" width="30" height="6" rx="3"/><rect x="114" y="44" width="30" height="6" rx="3"/><rect x="152" y="44" width="30" height="6" rx="3"/></g>
+  <circle cx="372" cy="47" r="11" fill="#FF7A45"/><path d="M368 44h8l-1 6h-6z" fill="#fff"/>
+  <rect x="14" y="62" width="372" height="52" rx="10" fill="#E7F0FE"/>
+  <rect x="28" y="76" width="150" height="10" rx="5" fill="#2B7CF3"/><rect x="28" y="92" width="100" height="7" rx="3.5" fill="#9FC5FA"/>
+  <rect x="300" y="80" width="70" height="20" rx="10" fill="#2B7CF3"/>
+  <g>
+    <rect x="14" y="126" width="86" height="90" rx="9" fill="#fff" stroke="#DFE7F3" stroke-width="1.5"/>
+    <rect x="24" y="136" width="66" height="40" rx="6" fill="#EEF3FA"/><rect x="24" y="184" width="50" height="7" rx="3.5" fill="#DFE7F3"/><rect x="24" y="197" width="34" height="9" rx="4.5" fill="#2B7CF3"/>
+    <rect x="110" y="126" width="86" height="90" rx="9" fill="#fff" stroke="#DFE7F3" stroke-width="1.5"/>
+    <rect x="120" y="136" width="66" height="40" rx="6" fill="#EEF3FA"/><rect x="120" y="184" width="56" height="7" rx="3.5" fill="#DFE7F3"/><rect x="120" y="197" width="34" height="9" rx="4.5" fill="#2B7CF3"/>
+    <rect x="206" y="126" width="86" height="90" rx="9" fill="#fff" stroke="#DFE7F3" stroke-width="1.5"/>
+    <rect x="216" y="136" width="66" height="40" rx="6" fill="#EEF3FA"/><rect x="216" y="184" width="44" height="7" rx="3.5" fill="#DFE7F3"/><rect x="216" y="197" width="34" height="9" rx="4.5" fill="#2B7CF3"/>
+    <rect x="302" y="126" width="84" height="90" rx="9" fill="#fff" stroke="#DFE7F3" stroke-width="1.5"/>
+    <rect x="312" y="136" width="64" height="40" rx="6" fill="#EEF3FA"/><rect x="312" y="184" width="52" height="7" rx="3.5" fill="#DFE7F3"/><rect x="312" y="197" width="34" height="9" rx="4.5" fill="#2B7CF3"/>
+  </g>
 </symbol>
-<symbol id="a-brick" viewBox="0 0 400 170">
-  <rect width="400" height="170" fill="#FFEDE5"/>
-  <g fill="#fff" stroke="#FF7A45" stroke-width="3">
-    <rect x="96" y="100" width="66" height="24" rx="5"/><rect x="168" y="100" width="66" height="24" rx="5"/><rect x="240" y="100" width="66" height="24" rx="5"/>
-    <rect x="132" y="70" width="66" height="24" rx="5"/><rect x="204" y="70" width="66" height="24" rx="5"/>
-    <rect x="168" y="40" width="66" height="24" rx="5"/></g>
-  <rect x="204" y="70" width="66" height="24" rx="5" fill="#FF7A45"/>
-  <circle cx="52" cy="60" r="22" fill="#FFB020"/><path d="M52 50v12l7 5" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+<symbol id="p-ais" viewBox="0 0 400 230">
+  <rect width="400" height="230" fill="#fff"/>
+  <rect width="400" height="32" fill="#F2F6FC"/><path d="M0 32h400" stroke="#DFE7F3" stroke-width="1.5"/>
+  <circle cx="18" cy="16" r="4" fill="#FF5C8A"/><circle cx="32" cy="16" r="4" fill="#FFB020"/><circle cx="46" cy="16" r="4" fill="#22C08A"/>
+  <rect x="64" y="8" width="250" height="16" rx="8" fill="#fff" stroke="#DFE7F3"/>
+  <text x="74" y="20" font-family="Manrope,sans-serif" font-size="9" fill="#6B7C97">ais-prof.kz</text>
+  <rect x="14" y="42" width="44" height="10" rx="5" fill="#22C08A"/>
+  <g fill="#DFE7F3"><rect x="74" y="44" width="28" height="6" rx="3"/><rect x="110" y="44" width="28" height="6" rx="3"/><rect x="146" y="44" width="28" height="6" rx="3"/></g>
+  <rect x="340" y="40" width="46" height="14" rx="7" fill="#E2F8F0"/>
+  <rect x="14" y="62" width="216" height="90" rx="10" fill="#E2F8F0"/>
+  <rect x="34" y="82" width="176" height="50" rx="4" fill="none" stroke="#22C08A" stroke-width="4"/>
+  <g fill="#22C08A"><circle cx="56" cy="82" r="2.6"/><circle cx="82" cy="82" r="2.6"/><circle cx="108" cy="82" r="2.6"/><circle cx="134" cy="82" r="2.6"/><circle cx="160" cy="82" r="2.6"/><circle cx="186" cy="82" r="2.6"/></g>
+  <rect x="240" y="62" width="146" height="42" rx="9" fill="#fff" stroke="#DFE7F3" stroke-width="1.5"/>
+  <rect x="252" y="74" width="40" height="12" rx="6" fill="#22C08A"/><rect x="252" y="91" width="80" height="6" rx="3" fill="#DFE7F3"/>
+  <rect x="240" y="110" width="146" height="42" rx="9" fill="#fff" stroke="#DFE7F3" stroke-width="1.5"/>
+  <rect x="252" y="122" width="30" height="12" rx="6" fill="#2B7CF3"/><rect x="252" y="139" width="70" height="6" rx="3" fill="#DFE7F3"/>
+  <rect x="14" y="164" width="372" height="52" rx="9" fill="#F7FAFF" stroke="#DFE7F3" stroke-width="1.5"/>
+  <g fill="#DFE7F3"><rect x="28" y="176" width="60" height="7" rx="3.5"/><rect x="110" y="176" width="90" height="7" rx="3.5"/><rect x="222" y="176" width="60" height="7" rx="3.5"/>
+    <rect x="28" y="196" width="60" height="7" rx="3.5"/><rect x="110" y="196" width="70" height="7" rx="3.5"/><rect x="222" y="196" width="46" height="7" rx="3.5"/></g>
+  <rect x="330" y="173" width="44" height="13" rx="6.5" fill="#E2F8F0"/><rect x="330" y="193" width="44" height="13" rx="6.5" fill="#FFF3DC"/>
 </symbol>
-<symbol id="a-frame" viewBox="0 0 400 170">
-  <rect width="400" height="170" fill="#E2F8F0"/>
-  <rect x="100" y="36" width="200" height="98" rx="10" fill="#fff" stroke="#22C08A" stroke-width="3"/>
-  <rect x="116" y="52" width="168" height="16" rx="8" fill="#C6F0E1"/>
-  <rect x="116" y="78" width="80" height="10" rx="5" fill="#22C08A"/>
-  <rect x="116" y="96" width="120" height="10" rx="5" fill="#DFE7F3"/><rect x="116" y="114" width="60" height="10" rx="5" fill="#DFE7F3"/>
-  <circle cx="266" cy="106" r="22" fill="#22C08A"/><path d="M258 106l6 6 12-14" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+<symbol id="p-rich" viewBox="0 0 400 230">
+  <rect width="400" height="230" fill="#fff"/>
+  <rect width="400" height="32" fill="#F2F6FC"/><path d="M0 32h400" stroke="#DFE7F3" stroke-width="1.5"/>
+  <circle cx="18" cy="16" r="4" fill="#FF5C8A"/><circle cx="32" cy="16" r="4" fill="#FFB020"/><circle cx="46" cy="16" r="4" fill="#22C08A"/>
+  <rect x="64" y="8" width="250" height="16" rx="8" fill="#fff" stroke="#DFE7F3"/>
+  <text x="74" y="20" font-family="Manrope,sans-serif" font-size="9" fill="#6B7C97">richlife.kz</text>
+  <rect x="14" y="42" width="52" height="10" rx="5" fill="#FF7A45"/>
+  <g fill="#DFE7F3"><rect x="82" y="44" width="26" height="6" rx="3"/><rect x="116" y="44" width="26" height="6" rx="3"/><rect x="150" y="44" width="26" height="6" rx="3"/></g>
+  <rect x="14" y="62" width="372" height="76" rx="10" fill="#FFEDE5"/>
+  <rect x="28" y="78" width="150" height="11" rx="5.5" fill="#FF7A45"/><rect x="28" y="96" width="110" height="7" rx="3.5" fill="#FFC2A6"/>
+  <rect x="28" y="112" width="64" height="16" rx="8" fill="#FF7A45"/>
+  <g>
+    <rect x="252" y="96" width="60" height="30" rx="5" fill="#fff" stroke="#FF7A45" stroke-width="2"/>
+    <path d="M312 104h14l12 10v12h-26z" fill="#fff" stroke="#FF7A45" stroke-width="2"/>
+    <circle cx="266" cy="130" r="5" fill="#152238"/><circle cx="322" cy="130" r="5" fill="#152238"/>
+  </g>
+  <g>
+    <rect x="14" y="150" width="86" height="66" rx="9" fill="#fff" stroke="#DFE7F3" stroke-width="1.5"/>
+    <rect x="42" y="162" width="30" height="24" rx="4" fill="#FFEDE5"/><rect x="30" y="194" width="54" height="7" rx="3.5" fill="#DFE7F3"/>
+    <rect x="110" y="150" width="86" height="66" rx="9" fill="#fff" stroke="#DFE7F3" stroke-width="1.5"/>
+    <rect x="138" y="162" width="30" height="24" rx="4" fill="#E1F5FD"/><rect x="126" y="194" width="54" height="7" rx="3.5" fill="#DFE7F3"/>
+    <rect x="206" y="150" width="86" height="66" rx="9" fill="#fff" stroke="#DFE7F3" stroke-width="1.5"/>
+    <rect x="234" y="162" width="30" height="24" rx="4" fill="#E2F8F0"/><rect x="222" y="194" width="54" height="7" rx="3.5" fill="#DFE7F3"/>
+    <rect x="302" y="150" width="84" height="66" rx="9" fill="#fff" stroke="#DFE7F3" stroke-width="1.5"/>
+    <rect x="329" y="162" width="30" height="24" rx="4" fill="#FFF3DC"/><rect x="317" y="194" width="54" height="7" rx="3.5" fill="#DFE7F3"/>
+  </g>
 </symbol>
-<symbol id="a-pos" viewBox="0 0 400 170">
-  <rect width="400" height="170" fill="#FFF3DC"/>
-  <rect x="80" y="40" width="112" height="90" rx="12" fill="#fff" stroke="#FFB020" stroke-width="3"/>
-  <rect x="96" y="56" width="80" height="18" rx="6" fill="#FFE3AE"/>
-  <g fill="#FFB020"><rect x="96" y="84" width="22" height="16" rx="5"/><rect x="125" y="84" width="22" height="16" rx="5"/><rect x="154" y="84" width="22" height="16" rx="5"/>
-    <rect x="96" y="106" width="22" height="16" rx="5"/><rect x="125" y="106" width="22" height="16" rx="5"/></g>
-  <g stroke="#152238" stroke-width="4" stroke-linecap="round"><path d="M226 52v66M240 52v66M254 52v66M268 52v66M282 52v66M296 52v66"/></g>
-  <rect x="216" y="128" width="92" height="8" rx="4" fill="#FF7A45"/>
+
+<symbol id="p-badam" viewBox="0 0 400 230">
+  <rect width="400" height="230" fill="#fff"/>
+  <rect width="400" height="32" fill="#F2F6FC"/><path d="M0 32h400" stroke="#DFE7F3" stroke-width="1.5"/>
+  <circle cx="18" cy="16" r="4" fill="#FF5C8A"/><circle cx="32" cy="16" r="4" fill="#FFB020"/><circle cx="46" cy="16" r="4" fill="#22C08A"/>
+  <rect x="64" y="8" width="250" height="16" rx="8" fill="#fff" stroke="#DFE7F3"/>
+  <text x="74" y="20" font-family="Manrope,sans-serif" font-size="9" fill="#6B7C97">badamqysh.kz</text>
+  <rect x="14" y="42" width="56" height="10" rx="5" fill="#FF7A45"/>
+  <g fill="#DFE7F3"><rect x="86" y="44" width="26" height="6" rx="3"/><rect x="120" y="44" width="26" height="6" rx="3"/><rect x="154" y="44" width="26" height="6" rx="3"/></g>
+  <rect x="14" y="62" width="372" height="84" rx="10" fill="#FFEDE5"/>
+  <g fill="#fff" stroke="#FF7A45" stroke-width="2">
+    <rect x="214" y="112" width="52" height="18" rx="3"/><rect x="272" y="112" width="52" height="18" rx="3"/>
+    <rect x="243" y="90" width="52" height="18" rx="3"/><rect x="301" y="90" width="52" height="18" rx="3"/>
+    <rect x="272" y="68" width="52" height="18" rx="3"/>
+  </g>
+  <rect x="243" y="90" width="52" height="18" rx="3" fill="#FF7A45"/>
+  <rect x="28" y="80" width="140" height="11" rx="5.5" fill="#FF7A45"/><rect x="28" y="98" width="100" height="7" rx="3.5" fill="#FFC2A6"/>
+  <rect x="28" y="116" width="64" height="16" rx="8" fill="#FF7A45"/>
+  <g>
+    <rect x="14" y="158" width="118" height="58" rx="9" fill="#fff" stroke="#DFE7F3" stroke-width="1.5"/>
+    <circle cx="38" cy="180" r="10" fill="#FFEDE5"/><rect x="56" y="175" width="56" height="7" rx="3.5" fill="#DFE7F3"/><rect x="28" y="196" width="80" height="6" rx="3" fill="#EEF3FA"/>
+    <rect x="141" y="158" width="118" height="58" rx="9" fill="#fff" stroke="#DFE7F3" stroke-width="1.5"/>
+    <circle cx="165" cy="180" r="10" fill="#E7F0FE"/><rect x="183" y="175" width="56" height="7" rx="3.5" fill="#DFE7F3"/><rect x="155" y="196" width="80" height="6" rx="3" fill="#EEF3FA"/>
+    <rect x="268" y="158" width="118" height="58" rx="9" fill="#fff" stroke="#DFE7F3" stroke-width="1.5"/>
+    <circle cx="292" cy="180" r="10" fill="#E2F8F0"/><rect x="310" y="175" width="56" height="7" rx="3.5" fill="#DFE7F3"/><rect x="282" y="196" width="80" height="6" rx="3" fill="#EEF3FA"/>
+  </g>
 </symbol>
-<symbol id="a-grid" viewBox="0 0 400 170">
-  <rect width="400" height="170" fill="#E7F0FE"/>
-  <g fill="#fff" stroke="#2B7CF3" stroke-width="3">
-    <rect x="70" y="34" width="60" height="44" rx="10"/><rect x="142" y="34" width="60" height="44" rx="10"/>
-    <rect x="214" y="34" width="60" height="44" rx="10"/><rect x="286" y="34" width="44" height="44" rx="10"/>
-    <rect x="70" y="92" width="60" height="44" rx="10"/><rect x="142" y="92" width="60" height="44" rx="10"/>
-    <rect x="214" y="92" width="60" height="44" rx="10"/><rect x="286" y="92" width="44" height="44" rx="10"/></g>
-  <rect x="142" y="34" width="60" height="44" rx="10" fill="#2B7CF3"/>
-  <rect x="214" y="92" width="60" height="44" rx="10" fill="#22C08A"/>
+
+<symbol id="p-steklo" viewBox="0 0 400 230">
+  <rect width="400" height="230" fill="#fff"/>
+  <rect width="400" height="32" fill="#F2F6FC"/><path d="M0 32h400" stroke="#DFE7F3" stroke-width="1.5"/>
+  <circle cx="18" cy="16" r="4" fill="#FF5C8A"/><circle cx="32" cy="16" r="4" fill="#FFB020"/><circle cx="46" cy="16" r="4" fill="#22C08A"/>
+  <rect x="64" y="8" width="250" height="16" rx="8" fill="#fff" stroke="#DFE7F3"/>
+  <text x="74" y="20" font-family="Manrope,sans-serif" font-size="9" fill="#6B7C97">issatayski.github.io/steklo</text>
+  <rect x="0" y="32" width="84" height="198" fill="#152238"/>
+  <rect x="14" y="46" width="42" height="9" rx="4.5" fill="#2B7CF3"/>
+  <g fill="#33445F"><rect x="14" y="70" width="56" height="7" rx="3.5"/><rect x="14" y="86" width="46" height="7" rx="3.5"/><rect x="14" y="102" width="52" height="7" rx="3.5"/><rect x="14" y="118" width="40" height="7" rx="3.5"/><rect x="14" y="134" width="50" height="7" rx="3.5"/></g>
+  <rect x="8" y="64" width="68" height="19" rx="6" fill="#22375A"/><rect x="14" y="70" width="56" height="7" rx="3.5" fill="#5B9BFF"/>
+  <g>
+    <rect x="96" y="44" width="68" height="42" rx="8" fill="#E7F0FE"/><rect x="106" y="56" width="30" height="12" rx="6" fill="#2B7CF3"/><rect x="106" y="72" width="44" height="6" rx="3" fill="#9FC5FA"/>
+    <rect x="172" y="44" width="68" height="42" rx="8" fill="#E2F8F0"/><rect x="182" y="56" width="26" height="12" rx="6" fill="#22C08A"/><rect x="182" y="72" width="44" height="6" rx="3" fill="#9EE0C6"/>
+    <rect x="248" y="44" width="68" height="42" rx="8" fill="#FFF3DC"/><rect x="258" y="56" width="34" height="12" rx="6" fill="#FFB020"/><rect x="258" y="72" width="44" height="6" rx="3" fill="#FFDDA0"/>
+    <rect x="324" y="44" width="62" height="42" rx="8" fill="#FFE9EF"/><rect x="334" y="56" width="24" height="12" rx="6" fill="#FF5C8A"/><rect x="334" y="72" width="40" height="6" rx="3" fill="#FFC2D3"/>
+  </g>
+  <rect x="96" y="96" width="180" height="120" rx="9" fill="#F7FAFF" stroke="#DFE7F3" stroke-width="1.5"/>
+  <g fill="#C9DEFD"><rect x="112" y="164" width="16" height="36" rx="4"/><rect x="136" y="146" width="16" height="54" rx="4"/><rect x="160" y="176" width="16" height="24" rx="4"/><rect x="208" y="152" width="16" height="48" rx="4"/><rect x="232" y="168" width="16" height="32" rx="4"/></g>
+  <rect x="184" y="132" width="16" height="68" rx="4" fill="#2B7CF3"/>
+  <rect x="112" y="112" width="70" height="8" rx="4" fill="#DFE7F3"/>
+  <rect x="286" y="96" width="100" height="120" rx="9" fill="#fff" stroke="#DFE7F3" stroke-width="1.5"/>
+  <g fill="#EEF3FA"><rect x="298" y="110" width="76" height="9" rx="4.5"/><rect x="298" y="128" width="60" height="9" rx="4.5"/><rect x="298" y="146" width="70" height="9" rx="4.5"/><rect x="298" y="164" width="52" height="9" rx="4.5"/></g>
+  <rect x="298" y="188" width="76" height="16" rx="8" fill="#2B7CF3"/>
 </symbol>
-<symbol id="a-route" viewBox="0 0 400 170">
-  <rect width="400" height="170" fill="#EEEAFF"/>
-  <path d="M40 128C96 128 100 52 180 52s84 76 180 76" stroke="#C9BEFF" stroke-width="4" stroke-dasharray="10 10" fill="none" stroke-linecap="round"/>
-  <circle cx="40" cy="128" r="10" fill="#7C5CFC"/>
-  <path d="M356 128v-14a12 12 0 1 0-24 0c0 9 12 20 12 20s12-11 12-20z" fill="#FF5C8A"/>
-  <rect x="136" y="60" width="104" height="46" rx="10" fill="#fff" stroke="#7C5CFC" stroke-width="3"/>
-  <rect x="148" y="70" width="36" height="24" rx="4" fill="#DCD5FF"/><rect x="192" y="70" width="36" height="24" rx="4" fill="#DCD5FF"/>
-  <circle cx="158" cy="112" r="8" fill="#7C5CFC"/><circle cx="220" cy="112" r="8" fill="#7C5CFC"/>
+
+<symbol id="p-tauaf" viewBox="0 0 400 230">
+  <rect width="400" height="230" fill="#fff"/>
+  <rect width="400" height="32" fill="#F2F6FC"/><path d="M0 32h400" stroke="#DFE7F3" stroke-width="1.5"/>
+  <circle cx="18" cy="16" r="4" fill="#FF5C8A"/><circle cx="32" cy="16" r="4" fill="#FFB020"/><circle cx="46" cy="16" r="4" fill="#22C08A"/>
+  <rect x="64" y="8" width="250" height="16" rx="8" fill="#fff" stroke="#DFE7F3"/>
+  <text x="74" y="20" font-family="Manrope,sans-serif" font-size="9" fill="#6B7C97">issatayski.github.io/tauaf</text>
+  <rect x="0" y="32" width="400" height="198" fill="#152238"/>
+  <g stroke="#2E4160" stroke-width="1"><path d="M0 70h400M0 110h400M0 150h400M0 190h400M80 32v198M160 32v198M240 32v198M320 32v198"/></g>
+  <path d="M56 74l72 34 66 24 74 30 74 24" stroke="#7C5CFC" stroke-width="3" fill="none" stroke-linecap="round" stroke-dasharray="8 7"/>
+  <g><circle cx="56" cy="74" r="12" fill="#FFB020"/><rect x="44" y="94" width="42" height="7" rx="3.5" fill="#3A4E6E"/></g>
+  <circle cx="128" cy="108" r="8" fill="#7C5CFC"/><circle cx="194" cy="132" r="8" fill="#7C5CFC"/><circle cx="268" cy="162" r="8" fill="#7C5CFC"/>
+  <g><circle cx="342" cy="186" r="12" fill="#22C08A"/></g>
+  <rect x="14" y="44" width="90" height="10" rx="5" fill="#FFB020"/>
+  <rect x="286" y="44" width="100" height="26" rx="13" fill="#22375A"/><rect x="298" y="53" width="60" height="8" rx="4" fill="#7C5CFC"/>
 </symbol>
-<symbol id="a-people" viewBox="0 0 400 170">
-  <rect width="400" height="170" fill="#E1F5FD"/>
-  <g fill="#fff" stroke="#12B5E5" stroke-width="3">
-    <circle cx="112" cy="62" r="20"/><path d="M76 122c0-20 16-32 36-32s36 12 36 32z"/>
-    <circle cx="292" cy="62" r="20"/><path d="M256 122c0-20 16-32 36-32s36 12 36 32z"/></g>
-  <path d="M176 86h52M218 76l12 10-12 10" stroke="#FF7A45" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+<symbol id="p-shtory" viewBox="0 0 400 230">
+  <rect width="400" height="230" fill="#fff"/>
+  <rect width="400" height="32" fill="#F2F6FC"/><path d="M0 32h400" stroke="#DFE7F3" stroke-width="1.5"/>
+  <circle cx="18" cy="16" r="4" fill="#FF5C8A"/><circle cx="32" cy="16" r="4" fill="#FFB020"/><circle cx="46" cy="16" r="4" fill="#22C08A"/>
+  <rect x="64" y="8" width="250" height="16" rx="8" fill="#fff" stroke="#DFE7F3"/>
+  <text x="74" y="20" font-family="Manrope,sans-serif" font-size="9" fill="#6B7C97">issatayski.github.io/shtory</text>
+  <rect x="14" y="42" width="48" height="10" rx="5" fill="#12B5E5"/>
+  <g fill="#DFE7F3"><rect x="78" y="44" width="26" height="6" rx="3"/><rect x="112" y="44" width="26" height="6" rx="3"/></g>
+  <rect x="330" y="40" width="26" height="14" rx="7" fill="#E1F5FD"/><rect x="360" y="40" width="26" height="14" rx="7" fill="#EEF3FA"/>
+  <rect x="14" y="62" width="180" height="154" rx="10" fill="#E1F5FD"/>
+  <rect x="34" y="80" width="140" height="96" rx="4" fill="#fff" stroke="#12B5E5" stroke-width="2"/>
+  <g stroke="#B7E7F8" stroke-width="4"><path d="M40 92h128M40 104h128M40 116h128M40 128h128M40 140h128M40 152h128M40 164h128"/></g>
+  <rect x="34" y="188" width="90" height="16" rx="8" fill="#12B5E5"/>
+  <rect x="204" y="62" width="182" height="154" rx="10" fill="#fff" stroke="#DFE7F3" stroke-width="1.5"/>
+  <rect x="218" y="78" width="100" height="9" rx="4.5" fill="#152238"/>
+  <g>
+    <rect x="218" y="98" width="154" height="24" rx="12" fill="#E1F5FD"/><rect x="230" y="106" width="60" height="8" rx="4" fill="#12B5E5"/>
+    <rect x="218" y="128" width="154" height="24" rx="12" fill="#F2F6FC"/><rect x="230" y="136" width="72" height="8" rx="4" fill="#C3D0E4"/>
+    <rect x="218" y="158" width="154" height="24" rx="12" fill="#F2F6FC"/><rect x="230" y="166" width="50" height="8" rx="4" fill="#C3D0E4"/>
+  </g>
+  <rect x="218" y="190" width="86" height="18" rx="9" fill="#22C08A"/>
 </symbol>
-<symbol id="a-qr" viewBox="0 0 400 170">
-  <rect width="400" height="170" fill="#FFE9EF"/>
-  <rect x="66" y="38" width="92" height="92" rx="12" fill="#fff" stroke="#FF5C8A" stroke-width="3"/>
-  <g fill="#FF5C8A"><rect x="80" y="52" width="22" height="22" rx="4"/><rect x="122" y="52" width="22" height="22" rx="4"/><rect x="80" y="94" width="22" height="22" rx="4"/>
-    <rect x="122" y="94" width="10" height="10" rx="2"/><rect x="136" y="106" width="10" height="10" rx="2"/></g>
-  <path d="M182 84h56M228 74l12 10-12 10" stroke="#FF5C8A" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  <rect x="256" y="38" width="92" height="92" rx="12" fill="#fff" stroke="#FF5C8A" stroke-width="3"/>
-  <rect x="272" y="56" width="60" height="10" rx="5" fill="#FFC2D3"/><rect x="272" y="76" width="46" height="10" rx="5" fill="#FFC2D3"/>
-  <circle cx="326" cy="106" r="14" fill="#22C08A"/><path d="M320 106l4 4 8-9" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+<symbol id="p-mandi" viewBox="0 0 400 230">
+  <rect width="400" height="230" fill="#fff"/>
+  <rect width="400" height="32" fill="#F2F6FC"/><path d="M0 32h400" stroke="#DFE7F3" stroke-width="1.5"/>
+  <circle cx="18" cy="16" r="4" fill="#FF5C8A"/><circle cx="32" cy="16" r="4" fill="#FFB020"/><circle cx="46" cy="16" r="4" fill="#22C08A"/>
+  <rect x="64" y="8" width="250" height="16" rx="8" fill="#fff" stroke="#DFE7F3"/>
+  <text x="74" y="20" font-family="Manrope,sans-serif" font-size="9" fill="#6B7C97">issatayski.github.io/mandi</text>
+  <rect x="0" y="32" width="400" height="112" fill="#1A1208"/>
+  <rect x="14" y="44" width="60" height="10" rx="5" fill="#FFB020"/>
+  <g fill="#453623"><rect x="90" y="46" width="26" height="6" rx="3"/><rect x="124" y="46" width="26" height="6" rx="3"/><rect x="158" y="46" width="26" height="6" rx="3"/></g>
+  <circle cx="316" cy="98" r="40" fill="#2A1E0E"/><circle cx="316" cy="98" r="27" fill="#FFB020"/><circle cx="316" cy="98" r="14" fill="#E08A2E"/>
+  <rect x="28" y="72" width="120" height="12" rx="6" fill="#FFB020"/><rect x="28" y="92" width="86" height="7" rx="3.5" fill="#6A583C"/>
+  <rect x="28" y="110" width="72" height="18" rx="9" fill="#FFB020"/><rect x="110" y="110" width="72" height="18" rx="9" fill="none" stroke="#FFB020" stroke-width="2"/>
+  <g>
+    <rect x="14" y="156" width="180" height="26" rx="8" fill="#F7FAFF" stroke="#DFE7F3" stroke-width="1.5"/>
+    <rect x="26" y="165" width="70" height="8" rx="4" fill="#C3D0E4"/><rect x="140" y="163" width="42" height="12" rx="6" fill="#FFF3DC"/>
+    <rect x="14" y="190" width="180" height="26" rx="8" fill="#F7FAFF" stroke="#DFE7F3" stroke-width="1.5"/>
+    <rect x="26" y="199" width="54" height="8" rx="4" fill="#C3D0E4"/><rect x="140" y="197" width="42" height="12" rx="6" fill="#FFF3DC"/>
+    <rect x="206" y="156" width="180" height="60" rx="9" fill="#fff" stroke="#DFE7F3" stroke-width="1.5"/>
+    <rect x="218" y="168" width="60" height="8" rx="4" fill="#152238"/>
+    <rect x="218" y="184" width="120" height="7" rx="3.5" fill="#DFE7F3"/>
+    <rect x="218" y="197" width="72" height="12" rx="6" fill="#22C08A"/>
+  </g>
 </symbol>
-<symbol id="a-pulse" viewBox="0 0 400 170">
-  <rect width="400" height="170" fill="#E2F8F0"/>
-  <rect x="70" y="34" width="180" height="102" rx="12" fill="#fff" stroke="#22C08A" stroke-width="3"/>
-  <path d="M70 62h180" stroke="#C6F0E1" stroke-width="3"/>
-  <path d="M88 104h26l12-30 16 54 12-36h32" stroke="#FF5C8A" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  <rect x="278" y="52" width="66" height="66" rx="18" fill="#22C08A"/>
-  <path d="M311 68v34M294 85h34" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+
+<symbol id="p-aghl" viewBox="0 0 400 230">
+  <rect width="400" height="230" fill="#fff"/>
+  <rect width="400" height="32" fill="#F2F6FC"/><path d="M0 32h400" stroke="#DFE7F3" stroke-width="1.5"/>
+  <circle cx="18" cy="16" r="4" fill="#FF5C8A"/><circle cx="32" cy="16" r="4" fill="#FFB020"/><circle cx="46" cy="16" r="4" fill="#22C08A"/>
+  <rect x="64" y="8" width="250" height="16" rx="8" fill="#fff" stroke="#DFE7F3"/>
+  <text x="74" y="20" font-family="Manrope,sans-serif" font-size="9" fill="#6B7C97">issatayski.github.io/aghl</text>
+  <rect x="14" y="42" width="50" height="10" rx="5" fill="#22C08A"/>
+  <g fill="#DFE7F3"><rect x="80" y="44" width="26" height="6" rx="3"/><rect x="114" y="44" width="26" height="6" rx="3"/><rect x="148" y="44" width="26" height="6" rx="3"/></g>
+  <rect x="14" y="62" width="372" height="80" rx="10" fill="#E2F8F0"/>
+  <g stroke="#9EE0C6" stroke-width="4" stroke-linecap="round"><path d="M232 126h140M244 114h128M256 102h116M268 90h104"/></g>
+  <path d="M320 62c-26 12-34 30-30 46 18 2 32-14 34-30z" fill="#22C08A" opacity=".55"/>
+  <rect x="28" y="78" width="150" height="11" rx="5.5" fill="#22C08A"/><rect x="28" y="96" width="110" height="7" rx="3.5" fill="#9EE0C6"/>
+  <rect x="28" y="114" width="68" height="16" rx="8" fill="#22C08A"/><rect x="104" y="114" width="68" height="16" rx="8" fill="none" stroke="#22C08A" stroke-width="2"/>
+  <g>
+    <rect x="14" y="154" width="66" height="20" rx="10" fill="#E2F8F0"/><rect x="86" y="154" width="66" height="20" rx="10" fill="#F2F6FC"/>
+    <rect x="158" y="154" width="66" height="20" rx="10" fill="#F2F6FC"/><rect x="230" y="154" width="66" height="20" rx="10" fill="#F2F6FC"/>
+    <rect x="302" y="154" width="84" height="20" rx="10" fill="#F2F6FC"/>
+  </g>
+  <rect x="14" y="184" width="372" height="32" rx="9" fill="#fff" stroke="#DFE7F3" stroke-width="1.5"/>
+  <g fill="#EEF3FA"><rect x="28" y="194" width="90" height="12" rx="6"/><rect x="128" y="194" width="90" height="12" rx="6"/><rect x="228" y="194" width="70" height="12" rx="6"/></g>
+  <rect x="308" y="192" width="66" height="16" rx="8" fill="#22C08A"/>
 </symbol>
-<symbol id="a-360" viewBox="0 0 400 170">
-  <rect width="400" height="170" fill="#E7F0FE"/>
-  <circle cx="160" cy="85" r="52" fill="#fff" stroke="#2B7CF3" stroke-width="3"/>
-  <ellipse cx="160" cy="85" rx="52" ry="20" fill="none" stroke="#9FC5FA" stroke-width="3"/>
-  <path d="M160 33v104" stroke="#9FC5FA" stroke-width="3"/>
-  <path d="M232 85a58 22 0 1 0 10-13" stroke="#FF7A45" stroke-width="4" fill="none" stroke-linecap="round"/>
-  <rect x="286" y="58" width="66" height="54" rx="12" fill="#fff" stroke="#2B7CF3" stroke-width="3"/>
-  <circle cx="319" cy="85" r="15" fill="#2B7CF3"/>
+
+<symbol id="p-tereze" viewBox="0 0 400 230">
+  <rect width="400" height="230" fill="#fff"/>
+  <rect width="400" height="32" fill="#F2F6FC"/><path d="M0 32h400" stroke="#DFE7F3" stroke-width="1.5"/>
+  <circle cx="18" cy="16" r="4" fill="#FF5C8A"/><circle cx="32" cy="16" r="4" fill="#FFB020"/><circle cx="46" cy="16" r="4" fill="#22C08A"/>
+  <rect x="64" y="8" width="250" height="16" rx="8" fill="#fff" stroke="#DFE7F3"/>
+  <text x="74" y="20" font-family="Manrope,sans-serif" font-size="9" fill="#6B7C97">issatayski.github.io/tereze</text>
+  <rect x="14" y="42" width="52" height="10" rx="5" fill="#2B7CF3"/>
+  <g fill="#DFE7F3"><rect x="82" y="44" width="26" height="6" rx="3"/><rect x="116" y="44" width="26" height="6" rx="3"/><rect x="150" y="44" width="26" height="6" rx="3"/></g>
+  <rect x="322" y="40" width="64" height="14" rx="7" fill="#2B7CF3"/>
+  <rect x="14" y="62" width="372" height="82" rx="10" fill="#E7F0FE"/>
+  <g fill="#fff" stroke="#2B7CF3" stroke-width="2.5">
+    <rect x="240" y="74" width="60" height="58" rx="3"/><rect x="306" y="74" width="60" height="58" rx="3"/>
+  </g>
+  <path d="M270 74v58M240 103h60M336 74v58M306 103h60" stroke="#9FC5FA" stroke-width="2"/>
+  <rect x="28" y="80" width="160" height="11" rx="5.5" fill="#2B7CF3"/><rect x="28" y="98" width="120" height="7" rx="3.5" fill="#9FC5FA"/>
+  <rect x="28" y="114" width="70" height="16" rx="8" fill="#2B7CF3"/>
+  <g>
+    <rect x="14" y="156" width="86" height="60" rx="9" fill="#fff" stroke="#DFE7F3" stroke-width="1.5"/>
+    <rect x="26" y="166" width="62" height="26" rx="4" fill="#E7F0FE"/><rect x="26" y="198" width="46" height="7" rx="3.5" fill="#DFE7F3"/>
+    <rect x="110" y="156" width="86" height="60" rx="9" fill="#fff" stroke="#DFE7F3" stroke-width="1.5"/>
+    <rect x="122" y="166" width="62" height="26" rx="4" fill="#E2F8F0"/><rect x="122" y="198" width="54" height="7" rx="3.5" fill="#DFE7F3"/>
+    <rect x="206" y="156" width="86" height="60" rx="9" fill="#fff" stroke="#DFE7F3" stroke-width="1.5"/>
+    <rect x="218" y="166" width="62" height="26" rx="4" fill="#FFF3DC"/><rect x="218" y="198" width="40" height="7" rx="3.5" fill="#DFE7F3"/>
+    <rect x="302" y="156" width="84" height="60" rx="9" fill="#fff" stroke="#DFE7F3" stroke-width="1.5"/>
+    <rect x="314" y="166" width="60" height="26" rx="4" fill="#EEEAFF"/><rect x="314" y="198" width="50" height="7" rx="3.5" fill="#DFE7F3"/>
+  </g>
 </symbol>
-<symbol id="a-ar" viewBox="0 0 400 170">
-  <rect width="400" height="170" fill="#FFF3DC"/>
-  <rect x="140" y="24" width="82" height="122" rx="16" fill="#fff" stroke="#FFB020" stroke-width="3"/>
-  <path d="M170 34h22" stroke="#FFE3AE" stroke-width="4" stroke-linecap="round"/>
-  <path d="M181 120V92" stroke="#22C08A" stroke-width="4" stroke-linecap="round"/>
-  <circle cx="181" cy="74" r="16" fill="#FF5C8A"/><circle cx="181" cy="74" r="6" fill="#fff"/>
-  <path d="M262 122c18-8 28-24 28-42" stroke="#FFB020" stroke-width="4" fill="none" stroke-linecap="round"/>
-  <path d="M318 118v-16a14 14 0 1 1 28 0v16z" fill="#2B7CF3"/><circle cx="332" cy="66" r="12" fill="#2B7CF3"/>
-</symbol>
-<symbol id="a-compass" viewBox="0 0 400 170">
-  <rect width="400" height="170" fill="#E1F5FD"/>
-  <circle cx="150" cy="85" r="54" fill="#fff" stroke="#12B5E5" stroke-width="3"/>
-  <path d="M174 61l-16 40-40 16 16-40z" fill="#FF7A45"/>
-  <circle cx="150" cy="85" r="5" fill="#12B5E5"/>
-  <rect x="256" y="38" width="66" height="94" rx="14" fill="#fff" stroke="#12B5E5" stroke-width="3"/>
-  <rect x="270" y="58" width="38" height="9" rx="4.5" fill="#B7E7F8"/><rect x="270" y="76" width="38" height="9" rx="4.5" fill="#B7E7F8"/><rect x="270" y="94" width="24" height="9" rx="4.5" fill="#12B5E5"/>
-</symbol>
-<symbol id="a-voice" viewBox="0 0 400 170">
-  <rect width="400" height="170" fill="#EEEAFF"/>
-  <rect x="86" y="36" width="42" height="66" rx="21" fill="#7C5CFC"/>
-  <path d="M70 92a37 37 0 0 0 74 0M107 120v18M88 138h38" stroke="#7C5CFC" stroke-width="4" fill="none" stroke-linecap="round"/>
-  <g stroke="#FF5C8A" stroke-width="6" stroke-linecap="round">
-    <path d="M186 74v22M212 58v54M238 42v86M264 62v46M290 78v14M316 54v62"/></g>
-</symbol>
-<symbol id="a-slides" viewBox="0 0 400 170">
-  <rect width="400" height="170" fill="#E7F0FE"/>
-  <rect x="70" y="26" width="72" height="118" rx="14" fill="#fff" stroke="#2B7CF3" stroke-width="3"/>
-  <rect x="156" y="26" width="72" height="118" rx="14" fill="#2B7CF3"/>
-  <rect x="242" y="26" width="72" height="118" rx="14" fill="#fff" stroke="#2B7CF3" stroke-width="3"/>
-  <g fill="#C9DEFD"><rect x="84" y="46" width="44" height="9" rx="4.5"/><rect x="84" y="64" width="30" height="9" rx="4.5"/>
-    <rect x="256" y="46" width="44" height="9" rx="4.5"/><rect x="256" y="64" width="34" height="9" rx="4.5"/></g>
-  <g fill="#fff" opacity=".85"><rect x="170" y="46" width="44" height="9" rx="4.5"/><rect x="170" y="64" width="30" height="9" rx="4.5"/></g>
-</symbol>
-<symbol id="a-scan" viewBox="0 0 400 170">
-  <rect width="400" height="170" fill="#FFEDE5"/>
-  <rect x="76" y="28" width="94" height="114" rx="12" fill="#fff" stroke="#FF7A45" stroke-width="3"/>
-  <g fill="#FFD5C2"><rect x="90" y="46" width="66" height="9" rx="4.5"/><rect x="90" y="64" width="46" height="9" rx="4.5"/><rect x="90" y="84" width="40" height="40" rx="6"/></g>
-  <path d="M64 86h118" stroke="#FF7A45" stroke-width="4" stroke-linecap="round"/>
-  <path d="M204 86h48M242 76l12 10-12 10" stroke="#FF7A45" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  <g fill="#fff" stroke="#FF7A45" stroke-width="3">
-    <rect x="272" y="34" width="40" height="40" rx="8"/><rect x="322" y="34" width="40" height="40" rx="8"/>
-    <rect x="272" y="96" width="40" height="40" rx="8"/><rect x="322" y="96" width="40" height="40" rx="8"/></g>
+
+<symbol id="p-mental" viewBox="0 0 400 230">
+  <rect width="400" height="230" fill="#fff"/>
+  <rect width="400" height="32" fill="#F2F6FC"/><path d="M0 32h400" stroke="#DFE7F3" stroke-width="1.5"/>
+  <circle cx="18" cy="16" r="4" fill="#FF5C8A"/><circle cx="32" cy="16" r="4" fill="#FFB020"/><circle cx="46" cy="16" r="4" fill="#22C08A"/>
+  <rect x="64" y="8" width="250" height="16" rx="8" fill="#fff" stroke="#DFE7F3"/>
+  <text x="74" y="20" font-family="Manrope,sans-serif" font-size="9" fill="#6B7C97">issatayski.github.io/mental2</text>
+  <rect x="14" y="42" width="372" height="174" rx="12" fill="#EEEAFF"/>
+  <g>
+    <rect x="34" y="58" width="46" height="24" rx="8" fill="#7C5CFC"/><text x="57" y="76" font-family="Manrope,sans-serif" font-size="16" font-weight="800" fill="#fff" text-anchor="middle">+</text>
+    <rect x="88" y="58" width="46" height="24" rx="8" fill="#fff"/><text x="111" y="76" font-family="Manrope,sans-serif" font-size="16" font-weight="800" fill="#7C5CFC" text-anchor="middle">−</text>
+    <rect x="142" y="58" width="46" height="24" rx="8" fill="#fff"/><text x="165" y="76" font-family="Manrope,sans-serif" font-size="15" font-weight="800" fill="#7C5CFC" text-anchor="middle">×</text>
+    <rect x="196" y="58" width="46" height="24" rx="8" fill="#fff"/><text x="219" y="76" font-family="Manrope,sans-serif" font-size="15" font-weight="800" fill="#7C5CFC" text-anchor="middle">÷</text>
+  </g>
+  <rect x="112" y="98" width="176" height="76" rx="14" fill="#fff"/>
+  <text x="200" y="152" font-family="Manrope,sans-serif" font-size="46" font-weight="800" fill="#152238" text-anchor="middle">+ 7</text>
+  <rect x="34" y="188" width="90" height="16" rx="8" fill="#fff"/><rect x="134" y="188" width="90" height="16" rx="8" fill="#fff"/>
+  <rect x="262" y="184" width="104" height="24" rx="12" fill="#7C5CFC"/>
+  <rect x="290" y="193" width="48" height="7" rx="3.5" fill="#fff"/>
 </symbol>
 </svg>
+
 
 <header class="hdr">
   <div class="hdr__in">
@@ -214,114 +346,80 @@ a.item:hover{box-shadow:var(--sh2);transform:translateY(-4px)}
 
   <header class="head">
     <h1>Все работы</h1>
-    <p>Часть уже работает у заказчиков, часть готова к запуску.</p>
+    <p>Сайты и программы учёта. Нажмите на любую карточку — откроется сам сайт.</p>
   </header>
 
   <div class="filters" role="group" aria-label="Фильтр">
     <button type="button" data-f="all" aria-pressed="true">Все</button>
-    <button type="button" data-f="prod" aria-pressed="false">Заводы и магазины</button>
-    <button type="button" data-f="market" aria-pressed="false">Площадки</button>
-    <button type="button" data-f="serv" aria-pressed="false">Услуги и клиники</button>
-    <button type="button" data-f="media" aria-pressed="false">Видео, AR, 360°</button>
-    <button type="button" data-f="own" aria-pressed="false">Мои продукты</button>
+    <button type="button" data-f="prod" aria-pressed="false">Заводы</button>
+    <button type="button" data-f="shop" aria-pressed="false">Магазины и поставки</button>
+    <button type="button" data-f="serv" aria-pressed="false">Услуги для людей</button>
+    <button type="button" data-f="erp" aria-pressed="false">Программы учёта</button>
+    <button type="button" data-f="tools" aria-pressed="false">Полезное</button>
   </div>
 
   <div class="list" id="list">
 
-    <a class="item" data-cat="prod" href="https://issatayski.github.io/steklo" target="_blank" rel="noopener">
-      <svg class="art" viewBox="0 0 400 170"><use href="#a-glass"/></svg>
-      <div class="txt"><div class="top"><span class="pill" style="background:var(--sky);color:var(--blue)">Стеклопакеты</span><span class="state">Демо онлайн</span></div>
-      <h2>GlassERP</h2><p>Заказ, раскрой стекла, проверка качества, паспорт на каждое изделие. У каждого работника свой экран.</p></div>
+    <a class="item" data-cat="shop" href="https://ordaprint.kz/" target="_blank" rel="noopener">
+      <svg class="art" viewBox="0 0 400 230"><use href="#p-orda"/></svg>
+      <div class="txt"><div class="top"><span class="pill" style="background:var(--sky);color:var(--blue)">Интернет-магазин</span><span class="state">Открыть →</span></div>
+      <h2>Orda Print</h2><p>Каталог товаров, карточки, корзина и оформление заказа.</p></div>
     </a>
-
-    <a class="item" data-cat="prod" href="https://badamqysh.kz" target="_blank" rel="noopener">
-      <svg class="art" viewBox="0 0 400 170"><use href="#a-brick"/></svg>
-      <div class="txt"><div class="top"><span class="pill" style="background:var(--orange-l);color:var(--orange)">Кирпичный завод</span><span class="state">Готово</span></div>
-      <h2>Badam Qysh</h2><p>Заявки, партии, отгрузка с сообщением в Telegram, склад не уходит в минус, табло в цеху.</p></div>
+    <a class="item" data-cat="prod erp" href="https://ais-prof.kz/" target="_blank" rel="noopener">
+      <svg class="art" viewBox="0 0 400 230"><use href="#p-ais"/></svg>
+      <div class="txt"><div class="top"><span class="pill" style="background:var(--green-l);color:var(--green)">Завод</span><span class="state">Открыть →</span></div>
+      <h2>АЙС Prof</h2><p>Сайт завода рамок для окон на двух языках. Внутри — программа учёта заказов и склада.</p></div>
     </a>
-
-    <div class="item" data-cat="prod">
-      <svg class="art" viewBox="0 0 400 170"><use href="#a-frame"/></svg>
-      <div class="txt"><div class="top"><span class="pill" style="background:var(--green-l);color:var(--green)">Профиль для окон</span><span class="state">Работает каждый день</span></div>
-      <h2>AisERP</h2><p>Заказы, склад, отгрузки и долги на заводе. Здесь всё проверяется на живой работе.</p></div>
-    </div>
-
-    <div class="item" data-cat="prod">
-      <svg class="art" viewBox="0 0 400 170"><use href="#a-pos"/></svg>
-      <div class="txt"><div class="top"><span class="pill" style="background:var(--yellow-l);color:var(--yellow)">Магазин и кухня</span><span class="state">Готовый образец</span></div>
-      <h2>Ansar</h2><p>Касса по штрихкоду, приготовление по рецепту со списанием продуктов, тетрадь долгов покупателей.</p></div>
-    </div>
-
-    <div class="item" data-cat="prod">
-      <svg class="art" viewBox="0 0 400 170"><use href="#a-grid"/></svg>
-      <div class="txt"><div class="top"><span class="pill" style="background:var(--sky);color:var(--blue)">Большой портал</span><span class="state">Делаю сейчас</span></div>
-      <h2>DoorNur</h2><p>15 направлений в одной системе: магазин, работа с клиентами, отдельные страницы под каждое дело.</p></div>
-    </div>
-
-    <a class="item" data-cat="market own" href="https://biletall.kz" target="_blank" rel="noopener">
-      <svg class="art" viewBox="0 0 400 170"><use href="#a-route"/></svg>
-      <div class="txt"><div class="top"><span class="pill" style="background:var(--violet-l);color:var(--violet)">Автобусы</span><span class="state">Мой продукт</span></div>
-      <h2>Bilet all</h2><p>Билеты на межгород: касса вокзала, проверка рейса перед выездом, покупка с телефона.</p></div>
+    <a class="item" data-cat="shop" href="https://richlife.kz/" target="_blank" rel="noopener">
+      <svg class="art" viewBox="0 0 400 230"><use href="#p-rich"/></svg>
+      <div class="txt"><div class="top"><span class="pill" style="background:var(--orange-l);color:var(--orange)">Поставки</span><span class="state">Открыть →</span></div>
+      <h2>Rich Life</h2><p>Сайт поставщика продуктов и бытовой химии: бренды, бестселлеры, заявка на прайс.</p></div>
     </a>
-
-    <div class="item" data-cat="market own">
-      <svg class="art" viewBox="0 0 400 170"><use href="#a-people"/></svg>
-      <div class="txt"><div class="top"><span class="pill" style="background:var(--cyan-l);color:var(--cyan)">Мастера</span><span class="state">Один из основателей</span></div>
-      <h2>usta.kz</h2><p>Одна из первых казахстанских площадок, где заказчик находит мастера.</p></div>
-    </div>
-
-    <div class="item" data-cat="serv">
-      <svg class="art" viewBox="0 0 400 170"><use href="#a-qr"/></svg>
-      <div class="txt"><div class="top"><span class="pill" style="background:var(--pink-l);color:var(--pink)">Клиника</span><span class="state">По заказу</span></div>
-      <h2>Приглашения по QR</h2><p>Врач даёт пациенту QR — заявка сразу у менеджера. Доска заявок, 8 городов, расчёт вознаграждений.</p></div>
-    </div>
-
-    <div class="item" data-cat="serv">
-      <svg class="art" viewBox="0 0 400 170"><use href="#a-pulse"/></svg>
-      <div class="txt"><div class="top"><span class="pill" style="background:var(--green-l);color:var(--green)">Сеть клиник</span><span class="state">Замысел</span></div>
-      <h2>ClinicOS</h2><p>Одна программа вместо десятка разных: запись, врачи, деньги, отчёты по всем филиалам.</p></div>
-    </div>
-
-    <div class="item" data-cat="media">
-      <svg class="art" viewBox="0 0 400 170"><use href="#a-360"/></svg>
-      <div class="txt"><div class="top"><span class="pill" style="background:var(--sky);color:var(--blue)">360°</span><span class="state">Вторая версия</span></div>
-      <h2>Виртуальные туры</h2><p>Съёмка помещений по инструкции, автоматическая сборка тура, приложение для человека на объекте.</p></div>
-    </div>
-
-    <div class="item" data-cat="media">
-      <svg class="art" viewBox="0 0 400 170"><use href="#a-ar"/></svg>
-      <div class="txt"><div class="top"><span class="pill" style="background:var(--yellow-l);color:var(--yellow)">Игра по городу</span><span class="state">Образец</span></div>
-      <h2>Тюльпаны Шымкента</h2><p>Дети ходят по городу с телефоном, находят тюльпаны у памятников и отвечают на вопросы.</p></div>
-    </div>
-
-    <div class="item" data-cat="serv own">
-      <svg class="art" viewBox="0 0 400 170"><use href="#a-compass"/></svg>
-      <div class="txt"><div class="top"><span class="pill" style="background:var(--cyan-l);color:var(--cyan)">Паломники</span><span class="state">Мой продукт</span></div>
-      <h2>Takia</h2><p>Карты без интернета и пошаговые подсказки по обрядам на шести языках.</p></div>
-    </div>
-
-    <div class="item" data-cat="media own">
-      <svg class="art" viewBox="0 0 400 170"><use href="#a-voice"/></svg>
-      <div class="txt"><div class="top"><span class="pill" style="background:var(--violet-l);color:var(--violet)">Обучение</span><span class="state">Для себя</span></div>
-      <h2>Голосовой помощник</h2><p>Бот в Telegram ведёт урок арабского голосом, объясняет и проверяет.</p></div>
-    </div>
-
-    <a class="item" data-cat="serv" href="https://issatayski.github.io/crm" target="_blank" rel="noopener">
-      <svg class="art" viewBox="0 0 400 170"><use href="#a-slides"/></svg>
-      <div class="txt"><div class="top"><span class="pill" style="background:var(--sky);color:var(--blue)">Предложения</span><span class="state">Смотреть пример</span></div>
-      <h2>Презентации-ссылки</h2><p>Одна мысль — один экран. Листается пальцем, отправляется ссылкой в WhatsApp.</p></div>
+    <a class="item" data-cat="prod erp" href="https://badamqysh.kz" target="_blank" rel="noopener">
+      <svg class="art" viewBox="0 0 400 230"><use href="#p-badam"/></svg>
+      <div class="txt"><div class="top"><span class="pill" style="background:var(--orange-l);color:var(--orange)">Кирпичный завод</span><span class="state">Открыть →</span></div>
+      <h2>Badam Qysh</h2><p>Сайт завода и программа учёта: заявки, партии, отгрузки, остатки.</p></div>
     </a>
-
-    <div class="item" data-cat="media">
-      <svg class="art" viewBox="0 0 400 170"><use href="#a-scan"/></svg>
-      <div class="txt"><div class="top"><span class="pill" style="background:var(--orange-l);color:var(--orange)">Каталог</span><span class="state">Сделано</span></div>
-      <h2>Каталог TIANMA</h2><p>Из бумажного скана — рабочий каталог: 60 позиций с фотографиями по 10 разделам.</p></div>
-    </div>
+    <a class="item" data-cat="erp prod" href="https://issatayski.github.io/steklo/" target="_blank" rel="noopener">
+      <svg class="art" viewBox="0 0 400 230"><use href="#p-steklo"/></svg>
+      <div class="txt"><div class="top"><span class="pill" style="background:var(--sky);color:var(--blue)">Программа учёта</span><span class="state">Открыть →</span></div>
+      <h2>GlassERP</h2><p>Демо программы для цеха стеклопакетов: заказ, раскрой стекла, проверка качества, паспорт изделия.</p></div>
+    </a>
+    <a class="item" data-cat="prod serv" href="https://issatayski.github.io/tereze/" target="_blank" rel="noopener">
+      <svg class="art" viewBox="0 0 400 230"><use href="#p-tereze"/></svg>
+      <div class="txt"><div class="top"><span class="pill" style="background:var(--sky);color:var(--blue)">Окна и витражи</span><span class="state">Открыть →</span></div>
+      <h2>NurSapa</h2><p>Сайт оконной компании: продукция, услуги, отзывы и заявка на бесплатный замер.</p></div>
+    </a>
+    <a class="item" data-cat="serv" href="https://issatayski.github.io/shtory/" target="_blank" rel="noopener">
+      <svg class="art" viewBox="0 0 400 230"><use href="#p-shtory"/></svg>
+      <div class="txt"><div class="top"><span class="pill" style="background:var(--cyan-l);color:var(--cyan)">Жалюзи и шторы</span><span class="state">Открыть →</span></div>
+      <h2>Стиль в каждом окне</h2><p>Сайт на казахском и русском: подбор за минуту и заявка сразу в WhatsApp.</p></div>
+    </a>
+    <a class="item" data-cat="serv" href="https://issatayski.github.io/mandi/" target="_blank" rel="noopener">
+      <svg class="art" viewBox="0 0 400 230"><use href="#p-mandi"/></svg>
+      <div class="txt"><div class="top"><span class="pill" style="background:var(--yellow-l);color:var(--yellow)">Кафе и доставка</span><span class="state">Открыть →</span></div>
+      <h2>Madina Mandi</h2><p>Арабская кухня: меню, комбо-наборы, доставка и форма заказа.</p></div>
+    </a>
+    <a class="item" data-cat="shop" href="https://issatayski.github.io/aghl/" target="_blank" rel="noopener">
+      <svg class="art" viewBox="0 0 400 230"><use href="#p-aghl"/></svg>
+      <div class="txt"><div class="top"><span class="pill" style="background:var(--green-l);color:var(--green)">Удобрения</span><span class="state">Открыть →</span></div>
+      <h2>Агрохимикаты</h2><p>Сайт поставщика удобрений: каталог, подбор схемы под культуру, заявка агроному.</p></div>
+    </a>
+    <a class="item" data-cat="tools" href="https://issatayski.github.io/tauaf/" target="_blank" rel="noopener">
+      <svg class="art" viewBox="0 0 400 230"><use href="#p-tauaf"/></svg>
+      <div class="txt"><div class="top"><span class="pill" style="background:var(--violet-l);color:var(--violet)">Карта</span><span class="state">Открыть →</span></div>
+      <h2>Маршрут хаджа</h2><p>Пять святых мест по настоящим координатам с анимацией пути.</p></div>
+    </a>
+    <a class="item" data-cat="tools" href="https://issatayski.github.io/mental2/" target="_blank" rel="noopener">
+      <svg class="art" viewBox="0 0 400 230"><use href="#p-mental"/></svg>
+      <div class="txt"><div class="top"><span class="pill" style="background:var(--violet-l);color:var(--violet)">Тренажёр</span><span class="state">Открыть →</span></div>
+      <h2>Ментальная арифметика</h2><p>Устный счёт: выбор действий, диапазона и скорости, результат в конце.</p></div>
+    </a>
 
   </div>
 
   <section class="cta">
-    <div><h2>Хотите так же?</h2><p>Первый разговор и оценка — бесплатно.</p></div>
+    <div><h2>Хотите такой же сайт или программу?</h2><p>Первый разговор и оценка — бесплатно.</p></div>
     <a href="tel:+77071751983">+7 707 175 19 83</a>
   </section>
 </div>
