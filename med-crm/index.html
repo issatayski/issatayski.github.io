@@ -226,9 +226,9 @@ svg.ch text{font-family:var(--font);fill:var(--muted);font-size:11px}
 
 /* schedule */
 .sch{display:grid;gap:0;border:1px solid var(--line);border-radius:10px;overflow:auto;background:#fff}
-.sch .h{position:sticky;top:0;background:#F8FAFC;border-bottom:1px solid var(--line);padding:8px 10px;font-size:12.5px;z-index:1}
+.sch .h{position:sticky;top:0;background:#F8FAFC;border-bottom:1px solid var(--line);padding:8px 10px;font-size:12.5px;z-index:3}
 .sch .h b{display:block;font-weight:600;font-size:13px;white-space:nowrap}
-.sch .tm{font-size:12px;color:var(--muted);padding:6px 8px;border-right:1px solid var(--line);border-bottom:1px solid var(--line-2);background:#FBFCFD;position:sticky;left:0}
+.sch .tm{font-size:12px;color:var(--muted);padding:6px 8px;border-right:1px solid var(--line);border-bottom:1px solid var(--line-2);background:#FBFCFD;position:sticky;left:0;z-index:2}
 .sch .sl{border-bottom:1px solid var(--line-2);border-right:1px solid var(--line-2);padding:3px;min-height:46px}
 .ap{border-radius:6px;padding:5px 7px;font-size:12px;line-height:1.3;height:100%;border-left:3px solid var(--brand);background:var(--brand-50);cursor:pointer}
 .ap b{font-weight:600;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -730,7 +730,7 @@ P.leads={t:'Заявки',i:'inbox',badge:newLeads,r(){
 P.sched={t:'Запись и расписание',i:'cal',r(){
   const who=['s1','s2','s3','s4','s5','s6','s7','s8','d3','d2'];
   const cols=who.length;
-  let g=`<div class="h" style="left:0;position:sticky;z-index:2">Время</div>`+who.map(w=>{const x=WHO(w);return `<div class="h"><b>${x.s}</b>${x.pos}</div>`}).join('');
+  let g=`<div class="h" style="left:0;position:sticky;z-index:4">Время</div>`+who.map(w=>{const x=WHO(w);return `<div class="h"><b>${x.s}</b>${x.pos}</div>`}).join('');
   SLOTS.forEach(m=>{if(m==='lunch'){g+=`<div class="tm">13:00</div>`+who.map(()=>`<div class="sl"><div class="ap lunch">Обед</div></div>`).join('');return}
     g+=`<div class="tm">${tm(m)}</div>`+who.map(w=>{const a=APPTS.find(x=>x.who===w&&x.m===m);if(!a)return `<div class="sl"><button class="btn sm gh" style="width:100%;height:100%;justify-content:center;opacity:.5" data-a="book" data-w="${w}" data-m="${m}">${ic('plus')}</button></div>`;return `<div class="sl"><div class="ap ${a.st}" title="${esc(a.name)} — ${esc(a.sv)}" ${a.pid?`data-a="pt" data-id="${a.pid}"`:''}><b>${esc(a.name.split(' ').slice(0,2).join(' '))}</b><span>${esc(a.sv)}</span></div></div>`}).join('')});
   const tot=APPTS.length,ns=APPTS.filter(a=>a.st==='noshow').length,conf=APPTS.filter(a=>a.st==='plan'&&a.conf).length,plan=APPTS.filter(a=>a.st==='plan').length;
